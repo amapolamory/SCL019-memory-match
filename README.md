@@ -1,7 +1,5 @@
 # Memory Match Game
-## Cambio amapola
-## Cambio Mayorlen
-## cambio pull
+
 ## Índice
 
 * [1. Preámbulo](#1-preámbulo)
