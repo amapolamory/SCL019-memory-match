@@ -23,9 +23,14 @@
 import puppies from '../data/puppies/puppies.js';
 console.log(puppies);
 
-const puppData = () => {
+const App = () => {
 
-}
+  const puppImg = document.createElement('section');
+  puppImg.className = 'memory-cards';
+  puppImg.textContent = 'Pupy Match';
+
+  return puppImg;
+};
 
 
-export default puppData;
+export default App;
