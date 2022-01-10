@@ -29,7 +29,7 @@ console.log(puppies);
 
 
 const App = {
-  card: const getData = () => [puppies];
+ const getData = () => [puppies],
 
 //Función Random
 const random = () => {
@@ -38,7 +38,7 @@ const random = () => {
 
   return cardData;
 console.log(cardData);  
-};
+},
 
 random();
 
@@ -55,6 +55,6 @@ const cardCreator = () => {
 
    
   
-};
+},
 export default App;
-
+}
