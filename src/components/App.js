@@ -19,17 +19,27 @@
 
 //   return el;
 // };
+  // const puppImg = document.createElement('section');
+  // puppImg.className = 'memory-cards';
+  // puppImg.textContent = 'Pupy Match';
+   // return puppImg;
 
 import puppies from '../data/puppies/puppies.js';
 console.log(puppies);
 
+const cardData= puppies;
+  cardData.forEach((items) => {
+    const card= document.createElement('div');
+    const front= document.createElement('img');
+    const back= document.createElement('div');
+  });
 const App = () => {
+  const cardData= puppies;
+  
 
-  const puppImg = document.createElement('section');
-  puppImg.className = 'memory-cards';
-  puppImg.textContent = 'Pupy Match';
+  
 
-  return puppImg;
+
 };
 
 
