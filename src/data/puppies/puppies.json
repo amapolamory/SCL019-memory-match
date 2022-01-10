@@ -2,33 +2,33 @@
     "name": "puppies",
     "items": [
       {
-        "id": "cocker",
-        "image": "../img/Cocker.jpg', bgColor: '#339933",
+        "id": "Cocker",
+        "image": "../../img/Cocker.jpg', bgColor: '#339933",
         "bgColor": "#339933"
       },
       {
-        "id": "collie",
-        "image": "../img/Collie.jpg', bgColor: '#339933",
+        "id": "Collie",
+        "image": "../../img/Collie.jpg', bgColor: '#339933",
         "bgColor": "#339933"
       },
       {
-        "id": "frances",
-        "image": "../img/Francés.jpg', bgColor: '#339933",
+        "id": "Francés",
+        "image": "../../img/Francés.jpg', bgColor: '#339933",
         "bgColor": "#339933"
       },
       {
-        "id": "inglés",
+        "id": "Inglés",
         "image": "../img/Inglés.jpg', bgColor: '#F05032",
         "bgColor": "#F05032"
       },
       {
-        "id": "terrier",
-        "image": "../img/Terrier.jpg', bgColor: '#F05032",
+        "id": "Terrier",
+        "image": "../../img/Terrier.jpg', bgColor: '#F05032",
         "bgColor": "#F05032"
       },
       {
-        "id": "hound",
-        "image": "../img/Hound.jpg', bgColor: '#F05032",
+        "id": "Hound",
+        "image": "../../img/Hound.jpg', bgColor: '#F05032",
         "bgColor": "#F05032"
       }
               
