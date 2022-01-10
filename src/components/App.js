@@ -27,7 +27,7 @@
 import puppies from '../data/puppies/puppies.js';
 console.log(puppies);
 
-const cardData= puppies;
+const getData = () => [puppies];
   cardData.forEach((items) => {
     const card= document.createElement('div');
     const front= document.createElement('img');
