@@ -1,3 +1,3 @@
-import App from './components/App.js';
+import match from './components/match.js';
 
-document.getElementById('root').appendChild(App());
+document.getElementById('root').appendChild(match());
