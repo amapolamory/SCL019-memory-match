@@ -24,37 +24,38 @@
   // puppImg.textContent = 'Pupy Match';
    // return puppImg;
 
-import puppies from '../data/puppies/puppies.js';
-console.log(puppies);
+// import puppies from '../data/puppies/puppies.js';
+// console.log(puppies);
 
 
-const App = {
- const getData = () => [puppies],
+// const App = {
+  
+//  const getData = () => [puppies],
 
-//Función Random
-const random = () => {
-  const cardData = getData();
-  cardData.sort(() => Math.random() - 0.5)
+// //Función Random
+// const random = () => {
+//   const cardData = getData();
+//   cardData.sort(() => Math.random() - 0.5)
 
-  return cardData;
-console.log(cardData);  
-},
+//   return cardData;
+// console.log(cardData);  
+// },
 
-random();
+// random();
 
-//Función para generar las cartas
-const cardCreator = () => {
-  const cardData = random();
+// //Función para generar las cartas
+// const cardCreator = () => {
+//   const cardData = random();
 
-//Crear elementos HTML
-  cardData.forEach((items) => {
-    const card= document.createElement('div');
-    const front= document.createElement('img');
-    const back= document.createElement('div');
-  });
+// //Crear elementos HTML
+//   cardData.forEach((items) => {
+//     const card= document.createElement('div');
+//     const front= document.createElement('img');
+//     const back= document.createElement('div');
+//   });
 
    
   
-},
-export default App;
-}
+// },
+// export default App;
+// }
