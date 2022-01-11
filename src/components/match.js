@@ -16,3 +16,15 @@ const random = () => {
 };
 
 random();
+
+
+const cardCreator = () => {
+    const cardData = random();
+  
+  //Crear elementos HTML
+    cardData.forEach((items) => {
+      const card= document.createElement('div');
+      const front= document.createElement('img');
+      const back= document.createElement('div');
+    });
+};

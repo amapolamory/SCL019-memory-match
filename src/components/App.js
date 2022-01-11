@@ -43,7 +43,7 @@
 
 // random();
 
-// //Función para generar las cartas
+//Función para generar las cartas
 // const cardCreator = () => {
 //   const cardData = random();
 
