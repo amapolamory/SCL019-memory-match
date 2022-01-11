@@ -8,11 +8,11 @@ const getData= () => [
     { id: 'Terrier', image: '../../img/Terrier.jpg', bgColor: '#F05032' },
     { id: 'Hound', image: '../../img/Hound.jpg', bgColor: '#F05032' },
 ];
-
+// Funcion de randomizar
 const random = () => {
     const cardData = getData();
     cardData.sort(() => Math.random() - 0.5)
  return cardData  ;
 };
 
-random()
+random();
