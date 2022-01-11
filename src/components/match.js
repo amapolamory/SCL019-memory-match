@@ -14,7 +14,7 @@ const random = () => {
     cardData.sort(() => Math.random() - 0.5)
  return cardData  ;
 };
-
+console.log(cardData);
 random();
 
 
