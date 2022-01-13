@@ -1,4 +1,3 @@
-
 const getData= () => [
 
     { id: 'Cocker', image: '../../img/Cocker.jpg', bgColor: '#339933' },
