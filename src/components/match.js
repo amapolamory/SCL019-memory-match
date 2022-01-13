@@ -15,3 +15,8 @@ function shuffle (array){
 
 
 }
+
+
+export default play;
+export {shuffle};
+export {play};

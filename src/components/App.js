@@ -10,10 +10,12 @@
 //   .then(console.log)
 //   .catch(console.error);
 //
-import puppies from '../data/puppies/puppies.js';
-console.log(puppies);
 
+
+import play from './match.js';// play es una funcion que debemos actualizar
 const App = () => {
+
+
   const el = document.createElement('div');
 
   el.className = 'App';
