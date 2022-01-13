@@ -47,11 +47,7 @@ const cardCreator = () => {
 card.addEventListener('click', (e) => {
   card.classList.toggle('toggleCard');
     });
-<<<<<<< HEAD
-};
-=======
   });
 };
 
 cardCreator();
->>>>>>> dbeb54b23e69e7cc6731c5eb24d7e8a8c224087d
