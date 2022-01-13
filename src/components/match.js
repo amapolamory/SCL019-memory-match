@@ -1,53 +1,17 @@
-const section = document.querySelector('section');
+import puppies from '../data/puppies/puppies.js';
+//Llamamos a los items del js de puppies
+const cards= puppies.items;
+//duplicar las cartas
+const doubleCard= cards.concat(cards);
+
+function shuffle (array){
+  for(let i = array.length-1 ; i > 0 ;i--){
+    let mate = Math.floor(Math.random()*(i+1));
+    let tempo = array[i];
+    array[i]= array[j];
+    array[j] = tempo;
+  }
+  console.log(shuffle)
 
 
-const getData = () => [
-
-    { id: 'Cocker', imgSrc: '../../img/Cocker.jpg', bgColor: '#339933' },
-    { id: 'Collie', imgSrc: '../../img/Collie.jpg', bgColor: '#339933' },
-    { id: 'Francés', imgSrc: '../../img/Francés.jpg', bgColor: '#339933' },
-    { id: 'Inglés', imgSrc: '../../img/Inglés.jpg', bgColor: '#F05032' },
-    { id: 'Terrier', imgSrc: '../../img/Terrier.jpg', bgColor: '#F05032' },
-    { id: 'Hound', imgSrc: '../../img/Hound.jpg', bgColor: '#F05032' },
-];
-
-// Funcion de randomizar
-const random = () => {
-    const cardData = getData();
-    cardData.sort(() => Math.random() - 0.5)
-
- return cardData;
- 
-};
-random();
-
-
-const cardCreator = () => {
-    const cardData = random();
-  
-  //Crear elementos HTML
-    cardData.forEach((item) => {
-      const card = document.createElement('div');
-      const front = document.createElement('img');
-      const back = document.createElement('div');
-
-     // Agregar clase a los elementos creados
-     card.classList = "card";
-     front.classList = "front";
-     back.classList = "back";
-
-     //Especificar info de las cartas
-     front.src = item.imgSrc;
-
-     //Agregar cartas en  section
-     section.appenChild(card);
-     card.appenChild(front);
-     card.appenChild(back);
-
-card.addEventListener('click', (e) => {
-  card.classList.toggle('toggleCard');
-    });
-  });
-};
-
-cardCreator();
+}
