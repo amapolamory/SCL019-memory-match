@@ -27,8 +27,13 @@ const App = () => {
 const container = document.createElement('div');
 container.className = 'container'; 
 
+//container interior
+const contInt = document.createElement('div');
+container.className = 'contInt'; 
+
+
 //div hijo que almacena el título
-const contTitle = document.createElement('div');
+const contTitle = document.createTextNode('Puppy Match');
   contTitle.className = 'title';
   container.appendChild(contTitle); 
 
