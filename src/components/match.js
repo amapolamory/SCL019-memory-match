@@ -43,6 +43,6 @@ const gameing = () => {
 }
 
 
-export default play;
+export default gameing;
 export {shuffle};
-export {play};
+export {gameing};

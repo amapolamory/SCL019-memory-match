@@ -12,7 +12,7 @@
 //
 
 
-import play from './match.js';// play es una funcion que debemos actualizar
+import gameing from './match.js';// play es una funcion que debemos actualizar
 const App = () => {
 
   //Aquí va función para ocultar la página de inicio
