@@ -39,7 +39,7 @@ const contTitle = document.createTextNode('Puppy Match');
 
   //div hijo que almacena el gif animado
     const contGift = document.createElement('div');
-  containerPikachu.className = 'dogSmile';
+  contGift.className = 'dogSmile';
   container.appendChild(contGift); 
 
   
@@ -47,7 +47,7 @@ const contTitle = document.createTextNode('Puppy Match');
   const contStart = document.createElement('div');
   subContainer.className = 'start';
   subContainer.addEventListener('click', startBtn); //reemplazar 'startBtn' por nuestra función
-  container.appendChild(constStart); 
+  container.appendChild(contStart); 
 
   //pié de página
   const footer = document.createElement('footer')
