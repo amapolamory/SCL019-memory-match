@@ -16,6 +16,32 @@ function shuffle (array){
 
 }
 
+let clickCard=[];
+let matchCard=[];
+
+const gameing = () => {
+  //HTML de la página
+  const gameContainer= document.createElement('div');
+  gameContainer.className= 'gameContainer';    //crear contenedor principal general del juego
+
+  const cardsGrid= document.createElement('div');
+  cardsGrid.id = 'cardsGrid';
+  cardsGrid.className = 'cardsGrid';
+  gameContainer.appendChild(cardsGrid);
+
+  const gridBoard = function (){
+
+    cardsGrid.innerHTML = "";
+
+    for (let i = 0; i < doubleCard.length; i++ );
+    console.log(doubleCard);
+    
+
+  }
+
+  
+}
+
 
 export default play;
 export {shuffle};
