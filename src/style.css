@@ -1,4 +1,7 @@
-
+*{
+    margin: 0 ;
+    padding: 0;
+}
 
 body{
     height: 100vh;
@@ -13,6 +16,7 @@ body{
     .container{
     display: flex;
     flex-wrap: wrap;
+    background-color: cadetblue;
     }
         
     .contInt{
@@ -22,3 +26,130 @@ body{
     border-radius: 20 px solid rgb(4, 161, 182);
     }
 
+    .contTitle{
+        padding: 10%;
+        background-size: contain;
+        background-repeat: no-repeat;  
+        position:absolute;
+        left: 40%;
+        top: 15%;
+    }
+
+    .contGift{
+        background-image: url("./img/dog-smile.gif");
+        padding: 5%;
+        background-size: contain;
+        background-repeat: no-repeat;  
+        position:absolute;
+        left: 44%;
+        top: 40%;  
+    }
+
+    .contStart{
+    background-image: url("./img/Brestart.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 44%;
+    bottom: 32%;
+    width: 12%;
+    height: 10%;
+    cursor: pointer;
+    }
+
+    .containerGrid{
+        width: 100%;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        align-content: space-between;
+        flex-wrap:wrap;
+        flex-direction: row;
+        padding: 2%;
+        position: absolute;
+        top: 0.5%;
+        left: 1%;
+    }
+    
+    .cardShown{
+        width: 16%;
+        height: 0%;
+        padding: 0%;
+        margin: 0 0 2% 0;
+        position: relative;
+        perspective: 1000px;
+    }
+    
+    .cardBack, .frontCard {
+        width: 60%; 
+        height: 30%; 
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+        border-radius: 10%;
+        border: 4px solid #000092;
+        transition: transform 1s;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+    }
+    
+    .cardBack:hover{
+        transform: scale(.97);
+        transition: transform 5s;
+        transition-duration: 1s;
+        box-shadow: 0 0 30px 20px rgb(255, 255, 255);
+    }
+    
+    .finalGame{
+        padding: 10%;
+    }
+    
+    .finalMsn{
+        font-family: 'Play', sans-serif;
+        color: white;
+        font-size: 300%;
+        font-weight:900;
+        text-align: center;
+        line-height: 150%;
+        white-space: pre-line;
+        background-color: #3fe56e;
+        border: 5px solid #c9ce1b;
+        border-radius: 10%;
+        position: absolute;
+        width: 65%;
+        height: 25%;
+        top: 2%;
+        left: 15%;
+    }
+    
+    .cup{
+        width: 22%;
+        height: 60%;
+        position: absolute;
+        top: 25%;
+        left: 35%;
+    }
+    
+    .streamer{
+        width: 70%;
+        height: 80%;
+        position: absolute;
+        top: 2%;
+        left: 15%;
+    }
+    
+    .btnReplay{
+        width: 14%;
+        height: 10%;
+        position: absolute;
+        top: 85%;
+        left: 40%;
+    }
+
+    footer{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px; 
+        font-weight: bolder;
+        color: black;
+        position: absolute;
+        top: 94%;
+        left: 37%;
+    }

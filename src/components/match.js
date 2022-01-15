@@ -16,7 +16,49 @@ function shuffle (array){
 
 }
 
+let clickCard=[];
+let matchCard=[];
 
-export default play;
+const gameing = () => {
+  //HTML de la página
+  const gameContainer= document.createElement('div');
+  gameContainer.className= 'gameContainer';    //crear contenedor principal general del juego
+
+  const cardsGrid= document.createElement('div');
+  cardsGrid.id = 'cardsGrid';
+  cardsGrid.className = 'cardsGrid';
+  gameContainer.appendChild(cardsGrid);
+
+  const gridBoard = function (){
+
+    cardsGrid.innerHTML = "";
+
+    for (let i = 0; i < doubleCard.length; i++ );
+    console.log(doubleCard);
+    let boardCard = document.createElement('div');
+    boardCard.className ='boardCard';
+    let backFace = document.createElement8('img');
+    backFace.setAttribute('src' ,) //insertar imagen de reverso
+
+    if(doubleCard[i].matched){
+      backFace.setAttribute('src', doubleCard[i].image) //segun lo que entiendo si hace un macth se remplaza la imagen del backface por la que hizo match de frontface
+      
+    }
+
+    frontFace.appendChild(backFace);
+    backFace.addEventListener('click', function(){
+      
+    })
+    
+
+    
+
+  }
+
+  
+}
+
+
+export default gameing;
 export {shuffle};
-export {play};
+export {gameing};
