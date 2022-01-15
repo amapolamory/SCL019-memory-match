@@ -35,6 +35,22 @@ const gameing = () => {
 
     for (let i = 0; i < doubleCard.length; i++ );
     console.log(doubleCard);
+    let boardCard = document.createElement('div');
+    boardCard.className ='boardCard';
+    let backFace = document.createElement8('img');
+    backFace.setAttribute('src' ,) //insertar imagen de reverso
+
+    if(doubleCard[i].matched){
+      backFace.setAttribute('src', doubleCard[i].image) //segun lo que entiendo si hace un macth se remplaza la imagen del backface por la que hizo match de frontface
+      
+    }
+
+    frontFace.appendChild(backFace);
+    backFace.addEventListener('click', function(){
+      
+    })
+    
+
     
 
   }

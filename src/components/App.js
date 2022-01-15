@@ -45,8 +45,8 @@ const contTitle = document.createTextNode('Puppy Match');
   
   // div hijo de container que almacena el botón start
   const contStart = document.createElement('div');
-  subContainer.className = 'start';
-  subContainer.addEventListener('click', startBtn); //reemplazar 'startBtn' por nuestra función
+  contStart.className = 'start';
+  contStart.addEventListener('click', startBtn); //reemplazar 'startBtn' por nuestra función
   container.appendChild(contStart); 
 
   //pié de página
