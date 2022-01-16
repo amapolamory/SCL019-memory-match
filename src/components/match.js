@@ -8,8 +8,8 @@ function shuffle (array){
   for(let i = array.length-1 ; i > 0 ;i--){
     let mate = Math.floor(Math.random()*(i+1));
     let tempo = array[i];
-    array[i]= array[j];
-    array[j] = tempo;
+    array[i]= array[mate];
+    array[mate] = tempo;
   }
   console.log(shuffle)
 
@@ -17,7 +17,7 @@ function shuffle (array){
 }
 
 let clickCard=[];
-let matchCard=[];
+let matchedCard=[];
 
 const gameing = () => {
   //HTML de la página
@@ -47,15 +47,54 @@ const gameing = () => {
 
     frontFace.appendChild(backFace);
     backFace.addEventListener('click', function(){
-      
-    })
-    
+      if (clickCard.length < 2){
+        backFace.setAttribute('src', doubleCard[i].image);
+        clickCard.push(doubleCard[i]);
+        setTimeout( () => {
+          flipBack (doubleCard, backFace[i]);
+        },500);
+      }
+    });
 
+    cardsGrid.appendChild(frontFace)
     
 
   }
+}
 
-  
+gridBoard();
+
+function flipBack(){
+  setTimeout(function(){
+    matchComplete(clickCard);
+
+  },1200);
+
+}
+
+function matchComplete(arrayOfClickCard){
+  if (arrayOfClickCard.length ==2 ){
+    if (arrayOfClickCard[0].id == arrayOfClickCard[1].id){
+      arrayOfClickCard[0].matched = true;
+      arrayOfClickCard[1].matched = true;
+      matchedCard++;
+      if (matchedCard === 6){
+        cardsGrid.style.display='';// este es para hacer desaparecer la pagina una vez que ganas 
+        endPopUp.style.display='';// ya que haremos un popUp no se si esto sera util
+        for (let i = 0 ; i < 17 ; i++ ){
+          doubleCard[i].matched = false;
+        
+        }
+        shuffle(doubleCard);
+        matchedCard =0;
+      }
+      else(gridBoard())
+        arrayOfClickCard.length = 0;
+
+    
+    }
+  }
+ return gameContainer;
 }
 
 
