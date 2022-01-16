@@ -25,35 +25,32 @@ const App = () => {
 
 // container padre
 const container = document.createElement('div');
-container.className = 'container'; 
+  container.className = 'container'; 
 
-//container interior
-const contInt = document.createElement('div');
-container.className = 'contInt'; 
+//contenedor Título
+const title1 = document.createElement('div');
+title1.className = 'title1';
+container.appendChild(title1); 
 
 
-//div hijo que almacena el título
-const contTitle = document.createTextNode('Puppy Match');
-  contTitle.className = 'title';
-  container.appendChild(contTitle); 
 
-  //div hijo que almacena el gif animado
-    const contGift = document.createElement('div');
-  contGift.className = 'dogSmile';
-  container.appendChild(contGift); 
+//div hijo que almacena el gif animado
+const contGift = document.createElement('div');
+contGift.className = 'dogSmile';
+container.appendChild(contGift); 
 
   
-  // div hijo de container que almacena el botón start
-  const contStart = document.createElement('div');
-  contStart.className = 'start';
-  contStart.addEventListener('click', startGame); //reemplazar 'startBtn' por nuestra función
-  container.appendChild(contStart); 
+//div hijo de container que almacena el botón start
+     const contStart = document.createElement('div');//   contStart.className = 'start';
+     contStart.className = 'start';
+     contStart.addEventListener('click', startGame); 
+     container.appendChild(contStart); 
 
-  //pié de página
-  const footer = document.createElement('footer')
-  footer.textContent= "© 2022 Laboratoria - Creado por Amapola Mory & Mayorlen Ortega"
-  footer.className = 'footer';
-  container.appendChild(footer); 
+//pié de página
+//   const footer = document.createElement('footer')
+//   footer.textContent= "© 2022 Laboratoria - Creado por Amapola Mory & Mayorlen Ortega"
+//   footer.className = 'footer';
+//   container.appendChild(footer); 
 
    
   return container;
