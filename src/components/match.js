@@ -79,8 +79,8 @@ function matchComplete(arrayOfClickCard){
       arrayOfClickCard[1].matched = true;
       matchedCard++;
       if (matchedCard === 6){
-        cardsGrid.style.display='';// este es para hacer desaparecer la pagina una vez que ganas 
-        endPopUp.style.display='';// ya que haremos un popUp no se si esto sera util
+        cardsGrid.style.display='none';// este es para hacer desaparecer la pagina una vez que ganas 
+        endPopUp.style.display='block';// ya que haremos un popUp no se si esto sera util
         for (let i = 0 ; i < 17 ; i++ ){
           doubleCard[i].matched = false;
         
