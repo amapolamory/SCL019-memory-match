@@ -20,8 +20,9 @@ const App = () => {
         
     document.getElementsByClassName('container');
     container.style.display = 'none';
-    document.getElementById('root').appendChild(play()); //reemplazar 'play'
+    document.getElementById('root').appendChild(gameing()); 
     }
+    
 
 // container padre
 const container = document.createElement('div');
@@ -35,9 +36,9 @@ container.appendChild(title1);
 
 
 //div hijo que almacena el gif animado
-const contGift = document.createElement('div');
-contGift.className = 'dogSmile';
-container.appendChild(contGift); 
+const contGif = document.createElement('div');
+contGif.className = 'dogSmile';
+container.appendChild(contGif); 
 
   
 //div hijo de container que almacena el botón start

@@ -29,7 +29,7 @@ const gameing = () => {
   cardsGrid.className = 'cardsGrid';
   gameContainer.appendChild(cardsGrid);
 
-  const gridBoard = function (){
+  const gridBoard = () => {
 
     cardsGrid.innerHTML = "";
 
@@ -38,8 +38,8 @@ const gameing = () => {
     let boardCard = document.createElement('div');
     boardCard.className ='boardCard';
     let backFace = document.createElement8('img');
-    backFace.setAttribute('src' ,) //insertar imagen de reverso
-
+    backFace.setAttribute('src' ,'../img/reverso_carta.png');//insertar imagen de reverso
+console.log(backFace)
     if(doubleCard[i].matched){
       backFace.setAttribute('src', doubleCard[i].image) //segun lo que entiendo si hace un macth se remplaza la imagen del backface por la que hizo match de frontface
       
@@ -62,7 +62,7 @@ const gameing = () => {
   }
 }
 
-gridBoard();
+
 
 function flipBack(){
   setTimeout(function(){
@@ -73,20 +73,20 @@ function flipBack(){
 }
 
 function matchComplete(arrayOfClickCard){
-  if (arrayOfClickCard.length ==2 ){
+  if (arrayOfClickCard.length == 2 ){
     if (arrayOfClickCard[0].id == arrayOfClickCard[1].id){
       arrayOfClickCard[0].matched = true;
       arrayOfClickCard[1].matched = true;
       matchedCard++;
       if (matchedCard === 6){
-        cardsGrid.style.display='none';// este es para hacer desaparecer la pagina una vez que ganas 
-        endPopUp.style.display='block';// ya que haremos un popUp no se si esto sera util
-        for (let i = 0 ; i < 17 ; i++ ){
+        // cardsGrid.style.display='none';// este es para hacer desaparecer la pagina una vez que ganas 
+        // endPopUp.style.display='block';// ya que haremos un popUp no se si esto sera util
+        for (let i = 0 ; i < 11 ; i++ ){//corre la data si no ha encontrado todos los match
           doubleCard[i].matched = false;
         
         }
         shuffle(doubleCard);
-        matchedCard =0;
+        matchedCard = 0;
       }
       else(gridBoard())
         arrayOfClickCard.length = 0;
