@@ -20,7 +20,7 @@ const App = () => {
         
     document.getElementsByClassName('container');
     container.style.display = 'none';
-    document.getElementById('root').appendChild(gameing()); 
+   // document.getElementById('root').appendChild(gameing()); 
     }
     
 
@@ -48,10 +48,10 @@ container.appendChild(contGif);
      container.appendChild(contStart); 
 
 //pié de página
-//   const footer = document.createElement('footer')
-//   footer.textContent= "© 2022 Laboratoria - Creado por Amapola Mory & Mayorlen Ortega"
-//   footer.className = 'footer';
-//   container.appendChild(footer); 
+const footer = document.createElement('footer')
+footer.textContent= "© 2022 Laboratoria - Creado por Amapola Mory & Mayorlen Ortega"
+footer.className = 'footer';
+container.appendChild(footer); 
 
    
   return container;

@@ -15,14 +15,13 @@ body{
 
  .container{
     display: flex;
+    align-items: center;
+    flex-direction: column;
     background-color: rgba(113,201,206);
     border-radius: 40px;
-    border-width: 20px;
     width: 700px;
     height: 700px;
     margin: 0 auto;
-    align-items: center;
-    flex-direction: column;
     border: 10px solid #E3FDFD;
      
 }
@@ -67,25 +66,10 @@ body{
     top: 70%; 
   }
 
-  .cardsGrid{
-    width: 100%;
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    align-content: space-between;
-    flex-wrap:wrap;
-    flex-direction: row;
-    padding: 2%;
-    position: absolute;
-    top: 0.5%;
-    left: 1%;
-}
+  .footer{
+    padding: 5%;
+    position:absolute;
+    top: 80%;
+  }
 
-.boardCard{
-  width: 16%;
-  height: 0%;
-  padding: 0%;
-  margin: 0 0 2% 0;
-  position: relative;
-  perspective: 1000px;
-}
+  
