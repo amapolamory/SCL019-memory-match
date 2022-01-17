@@ -12,64 +12,29 @@ body{
     background-position:center;  
     overflow: hidden;
 }
-
- .container{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: rgba(113,201,206);
-    border-radius: 40px;
-    width: 700px;
-    height: 700px;
-    margin: 0 auto;
-    border: 10px solid #E3FDFD;
-     
-}
-
-.title1{
-    background-image: url(img/title1.png);  
-    width: 30%;
-    padding: 35%;
-    align-items: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-
-.dogSmile{
-  background-image: url(img/dog-smile.gif);  
-  padding: 8%;
-  background-size: contain;
-  position:absolute;
-  left: 41%;
-  top: 30%; 
-  border: 8px solid #F3BC77;
-  border-radius: 20px;
-}
-
-.start{
-  background-image: url(img/Start.png);  
-  padding: 5%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  position:absolute;
-  left: 44%;
-  top: 70%; 
-}
-
-.start:hover{
-    background-image: url(img/Start2.png); 
-    padding: 5%;
-    background-repeat: no-repeat;
-    background-size: contain;
+.gameContainer{
+  background-color: #d5e9f5;
+    border: 10px solid black;
+    border-radius: 50px;
+    width: 80%;
+    height: 86%;
+    padding: 2%;
+    background-position: center;
     position:absolute;
-    left: 44%;
-    top: 70%; 
-  }
+    top:1.5%;
+    left:8%;
 
-  .footer{
-    padding: 5%;
-    position:absolute;
-    top: 80%;
-  }
+}
 
+ .boardCard{
+   display: flex;
+   flex-direction:column;
+   flex-wrap:wrap;
+   background-color: antiquewhite;
+ }
+  .cardsGrid{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   
+  }
