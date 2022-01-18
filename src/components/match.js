@@ -29,6 +29,8 @@ const gameing = () => {
   cardsGrid.className = 'cardsGrid';
   gameContainer.appendChild(cardsGrid);
 
+  
+  
   const gridBoard = () => {
 
     cardsGrid.innerHTML = "";

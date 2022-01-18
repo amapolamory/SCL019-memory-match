@@ -20,8 +20,8 @@ const App = () => {
         
     document.getElementsByClassName('container');
     container.style.display = 'none';
-   // document.getElementById('root').appendChild(gameing()); 
-    }
+   document.getElementById('root').appendChild(gameing()); 
+  }
     
 
 // container padre
