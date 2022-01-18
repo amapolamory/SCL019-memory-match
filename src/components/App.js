@@ -23,26 +23,35 @@ function shuffle (array){
 
     // CONTENEDOR PADRE DEL JUEGO
     const gameContainer= document.createElement('div');
-      gameContainer.className= 'gameContainer';    
+    gameContainer.className= 'gameContainer';   
+
     // CONTENEDOR DEL GRID DE CARTAS
       const cardsGrid= document.createElement('div');
       cardsGrid.id = 'cardsGrid';
       cardsGrid.className = 'cardsGrid';
-      gameContainer.appendChild(cardsGrid); //cardsGrid se crea como hijo de gameContainer
+      gameContainer.appendChild(cardsGrid); //cardsGrid se crea como hijo de gameContainer 
+      
+
+      
+
+
       
       // FUNCIÓN QUE MUESTRA LAS CARTAS DEL GRID
       const gridBoard = function() {
 
         cardsGrid.innerHTML = "";
         // RECORRE LA DATA
-        for (let i = 0; i < doubleCards.length; i++ );
+        for (let i = 0; i < doubleCards.length; i++ ){
 
         // INSERTA IMAGENES EN FRONTFACE Y BACKFACE
          let boardCard = document.createElement('div');
          boardCard.className ='boardCard';
 
          let backFace = document.createElement('img');
-         backFace.setAttribute('src' ,'../img/reverso_carta.png');
+         boardCard.appendChild(backFace)
+         backFace.setAttribute('src' ,'./img/reverso_carta.png');
+
+         let frontFace = document.createElement('div');
 
           //segun lo que entiendo si hace un match se remplaza la imagen del backface 
           //por la que hizo match de frontface   
@@ -50,7 +59,7 @@ function shuffle (array){
           backFace.setAttribute('src', doubleCards[i].image)
         }
          //backface queda en el dentro del frontFace 
-        frontFace.appendChild(backFace);
+        frontFace.appendChild(backFace); 
        
         backFace.addEventListener('click', function (){ //función que permite clickear una carta
             if (clickCard.length < 2){                  //Sólo se puede clickear 2 cartas cada vez
@@ -61,12 +70,9 @@ function shuffle (array){
                    flipBack (doubleCards, backFace[i]);
                   },500);
                 }
-             });
-        //Asignamos el div para cada carta
-        cardsGrid.appendChild(frontFace);
-      }
-    }
-  
+              });
+             }
+           }
     gridBoard();
    
     // tiempo en el que se dan vuelta si no hacen match
@@ -98,7 +104,7 @@ function matchComplete(arrayOfClickCard){
           matchedCard = 0;
         }
       }
-
+    }
       //Reiniciar función para jugar desde 0
       else (gridBoard())
           arrayOfClickCard.length = 0;   
@@ -107,8 +113,7 @@ function matchComplete(arrayOfClickCard){
 
 }
   return gameContainer //Consultar
-     
+
 };
-  
  export default App; 
  export {shuffle};
