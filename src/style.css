@@ -12,13 +12,8 @@ body{
     background-position:center;  
     overflow: hidden;
 }
-<<<<<<< HEAD
-/* .gameContainer{
-  background-color: #d5e9f5;
-=======
 .gameContainer{
     background-color: #d5e9f5;
->>>>>>> 7e5bdc7e4e44723acb426b5094c319074334751c
     border: 10px solid black;
     border-radius: 50px;
     width: 80%;
