@@ -1,49 +1,3 @@
-
-
-// import gameing from './match.js';// play es una funcion que debemos actualizar
-// const App = () => {
-
-//   //Aquí va función para ocultar la página de inicio
-//   const startGame = () => { 
-        
-//     document.getElementsByClassName('container');
-//     container.style.display = 'none';
-//    // document.getElementById('root').appendChild(gameing()); 
-//     }
-    
-
-// // container padre
-// const container = document.createElement('div');
-//   container.className = 'container'; 
-
-// //contenedor Título
-// const title1 = document.createElement('div');
-// title1.className = 'title1';
-// container.appendChild(title1); 
-
-
-
-// //div hijo que almacena el gif animado
-// const contGif = document.createElement('div');
-// contGif.className = 'dogSmile';
-// container.appendChild(contGif); 
-
-  
-// //div hijo de container que almacena el botón start
-//      const contStart = document.createElement('div');//   contStart.className = 'start';
-//      contStart.className = 'start';
-//      contStart.addEventListener('click', startGame); 
-//      container.appendChild(contStart); 
-
-// //pié de página
-// const footer = document.createElement('footer')
-// footer.textContent= "© 2022 Laboratoria - Creado por Amapola Mory & Mayorlen Ortega"
-// footer.className = 'footer';
-// container.appendChild(footer); 
-
-   
-//   return container;
-// };
 import puppies from '../data/puppies/puppies.js';
 
 const cards = puppies.items;
@@ -60,6 +14,9 @@ function shuffle (array){
   }
   let clickCard = [];
   let matchedCard = [];
+
+  
+
 
   const App = () => {
     // CONTENEDOR PADRE DEL JUEGO
@@ -86,8 +43,10 @@ function shuffle (array){
          if(doubleCards[i].matched){
           backFace.setAttribute('src', doubleCards[i].image) //segun lo que entiendo si hace un macth se remplaza la imagen del backface por la que hizo match de frontface   
         }
+        console.log(backFace)
        //backface queda en el dentro del frontFace 
         frontFace.appendChild(backFace);
+       
         backFace.addEventListener('click', function (){
           // si se a clickeado menos de dos cartas se le da un tiempo 
           if (clickCard.length < 2){
@@ -99,6 +58,7 @@ function shuffle (array){
                   },500);
                 
                 }
+                
      });
         //Cardsgrid es padre de frontFace lo que hace que se quede dentro de ese espacio
       cardsGrid.appendChild(frontFace);
