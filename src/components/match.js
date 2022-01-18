@@ -1,4 +1,4 @@
- import puppies from '../data/puppies/puppies.js';
+
 // //Llamamos a los items del js de puppies
 // const cards= puppies.items;
 // //duplicar las cartas
