@@ -26,16 +26,6 @@ body{
 
 }
 
- .boardCard{
-   display: flex;
-   flex-direction:column;
-   flex-wrap:wrap;
-   background-color: antiquewhite;
- }
-  .cardsGrid{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   
   }
   .frontFace, 
@@ -43,3 +33,5 @@ body{
 
     
   }
+
+  
