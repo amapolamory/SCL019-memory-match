@@ -10,7 +10,7 @@ body{
     background-size: 100%;
     background-repeat: repeat;
     background-position:center;  
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 
   .container{
@@ -19,7 +19,6 @@ body{
     height: 700px;
     margin: 0 auto;
     border-radius: 40px;
-
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -64,7 +63,7 @@ body{
     
   }
   
-
+/* App */
 .gameContainer{
   display: flex;
   flex-wrap:wrap;
@@ -118,3 +117,4 @@ footer{
   position: absolute;
   top: 94%;
   left: 37%;
+}

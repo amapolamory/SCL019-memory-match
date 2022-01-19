@@ -1,4 +1,4 @@
-import App from './App.js';
+
 
 const initGame = () => {
 
@@ -14,7 +14,7 @@ const initGame = () => {
 // container padre
 const container = document.createElement('div');
   container.className = 'container'; 
-  root.appendChild(container)
+
   
 
 //contenedor Título
