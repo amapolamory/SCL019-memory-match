@@ -1,17 +1,21 @@
+import App from './App.js';
+
 const initGame = () => {
 
   //Aquí va función para ocultar la página de inicio
-  const startGame = () => { 
+     const startGame = () => { 
         
     document.getElementsByClassName('container');
     container.style.display = 'none';
-    document.getElementById('root').appendChild(gameing()); 
+    //document.getElementById('root').appendChild(initGame()); 
     }
     
-
+  
 // container padre
 const container = document.createElement('div');
   container.className = 'container'; 
+  root.appendChild(container)
+  
 
 //contenedor Título
 const title1 = document.createElement('div');
@@ -29,16 +33,18 @@ container.appendChild(contGif);
 //div hijo de container que almacena el botón start
      const contStart = document.createElement('div');//   contStart.className = 'start';
      contStart.className = 'start';
-     contStart.addEventListener('click', startGame); 
      container.appendChild(contStart); 
-
-//pié de página
-const footer = document.createElement('footer')
+     contStart.addEventListener('click', startGame);
+    // contStart.addEventListener('click', App);
+     
+     //pié de página
+const footer = document.createElement('footer');
 footer.textContent= "© 2022 Laboratoria - Creado por Amapola Mory & Mayorlen Ortega"
 footer.className = 'footer';
 container.appendChild(footer); 
 
-   
+  
   return container;
 };
 
+export default initGame;
