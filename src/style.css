@@ -18,6 +18,7 @@ body{
     width: 1000px;
     height: 700px;
     margin: 0 auto;
+    border: solid #E3FDFD 10px;
     border-radius: 40px;
     border-color:#E3FDFD;
     border-width:10;
@@ -25,6 +26,7 @@ body{
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    
     
 
   }
@@ -62,7 +64,17 @@ body{
     bottom: 10%;
     width: 12%;
     height: 10%;
-    
+  }
+
+  .start:hover{
+    background-image: url("./img/Start2.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 44%;
+    bottom: 10%;
+    width: 12%;
+    height: 10%;
   }
   
 /* App */
