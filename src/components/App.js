@@ -30,7 +30,7 @@ function shuffle (array){
       cardsGrid.id = 'cardsGrid';
       cardsGrid.className = 'cardsGrid';
       gameContainer.appendChild(cardsGrid); //cardsGrid se crea como hijo de gameContainer 
-      
+      console.log(cardsGrid);
 
       
 
@@ -46,6 +46,7 @@ function shuffle (array){
         // INSERTA IMAGENES EN FRONTFACE Y BACKFACE
          let boardCard = document.createElement('div');
          boardCard.className ='boardCard';
+         cardsGrid.appendChild(boardCard);
 
          let backFace = document.createElement('img');
          boardCard.appendChild(backFace)
@@ -59,6 +60,7 @@ function shuffle (array){
           backFace.setAttribute('src', doubleCards[i].image)
         }
          //backface queda en el dentro del frontFace 
+         boardCard.appendChild(frontFace);
         frontFace.appendChild(backFace); 
        
         backFace.addEventListener('click', function (){ //función que permite clickear una carta
