@@ -95,9 +95,11 @@ body{
  
  
 }
+img{
+width: 70%;
+height: 50%;
+}
 .frontFace,.backFace{
-  width: auto;
-  height: auto;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
   transition: transform 1s;
   backFace-visibility: hidden;
