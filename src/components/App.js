@@ -51,6 +51,7 @@ function shuffle (array){
          let backFace = document.createElement('img');
          boardCard.appendChild(backFace)
          backFace.setAttribute('src' ,'./img/reverso_carta.png');
+         console.log(backFace);
 
          let frontFace = document.createElement('div');
 
