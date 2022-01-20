@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Sniglet&display=swap');
+
 *{
     margin: 0 ;
     padding: 0;
@@ -10,6 +12,7 @@ body{
     background-size: 100%;
     background-repeat: repeat;
     background-position:center;  
+    font-family: 'Sniglet', cursive;
     /* overflow: hidden; */
   }
 
@@ -76,18 +79,46 @@ body{
     top: 75%;
   } 
 
-  
+ /*Elementos externos del juego*/
+
+ h1{
+   color: #F0DAB1;
+   font-size: 5vw;
+   display: flex;
+   justify-content: center;
+   -webkit-text-stroke: 1px #A55233;
+
+ }
+ .instruction{
+   background-image: url('img/instrucciones.png');
+   background-position-y: center;
+   background-repeat: no-repeat;
+   background-color: #F0DAB1; 
+   background-size: 100%;
+   border-radius: 20px;
+   border:7px solid #A55233;
+   display: flex;
+   justify-content: center;
+   position: absolute;
+   width: 15%;
+   height: 50%;
+  }
+   
+   
+ 
 /* App */
 .gameContainer{
   display: flex;
   flex-wrap:wrap;
+  justify-content: left;
+  align-items: center;
  
 }
 .cardsGrid{
   display:grid ;
-  grid-template-columns: repeat(4, 11rem);
-  grid-template-rows: repeat(3 ,11rem);
-  grid-gap: 2rem;
+  grid-template-columns: repeat(4, 55%);
+  grid-template-rows: repeat(3 ,7rem);
+  grid-gap: 10%;
   flex-wrap:wrap;
   justify-content: space-evenly;
   width: 100%;
@@ -96,18 +127,15 @@ body{
   position: relative;
   top: 20%;
   left: 1%;
-  
-
-}
+ }
 
 
  img{
-
 border-radius: 10px;
 border: 6px solid #A55233;
 position: absolute;
-width: 173px;
-height: 189px;
+width: 9%;
+height: 16%;
 top: 0.5;
 transform :scale(1);
 

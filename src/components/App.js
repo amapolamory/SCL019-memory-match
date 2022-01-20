@@ -17,25 +17,30 @@ shuffle();
   //Declaramos dos arrays: 1)Cartas clickeadas 2)Match
   let clickCard = [];
   let matchedCard = [];
+ 
+  
 
   //Función para crear estructura y añadir funcionalidad al juego
   const App = () => {
+
 
     // CONTENEDOR PADRE DEL JUEGO
     const gameContainer= document.createElement('div');
     gameContainer.className= 'gameContainer';   
 
-    // CONTENEDOR DEL GRID DE CARTAS
+    //Elementos externos del juego
+      const instruction = document.createElement('div');
+      instruction.className = 'instruction';
+      gameContainer.appendChild(instruction);
+
+          // CONTENEDOR DEL GRID DE CARTAS
       const cardsGrid= document.createElement('div');
       cardsGrid.id = 'cardsGrid';
       cardsGrid.className = 'cardsGrid';
       gameContainer.appendChild(cardsGrid); //cardsGrid se crea como hijo de gameContainer 
     
-
-      
-
-
-      
+     
+           
       // FUNCIÓN QUE MUESTRA LAS CARTAS DEL GRID
       const gridBoard = function() {
 
