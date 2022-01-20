@@ -3,16 +3,16 @@ import puppies from '../data/puppies/puppies.js';
 const cards = puppies.items;  
 const doubleCards= cards.concat(cards); //almacenamos las cartas duplicadas (cards+cards)
 
+//aleotizar cartas
+const shuffle = () => {
+  const cardData = doubleCards;
+  cardData.sort(() => Math.random() - 0.5)
+  return cardData;
 
-//Función para aleatorizar las cartas
-function shuffle (doubleCards){  
-  for(let i = doubleCards.length - 1 ; i > 0 ;i--){
-   let mate = Math.floor(Math.random()*(i+1));
-   let tempo = doubleCards[i];
-   doubleCards[i] = doubleCards[mate];
-   doubleCards[mate] = tempo;
-   }
-  }
+};
+
+shuffle();
+
   
   //Declaramos dos arrays: 1)Cartas clickeadas 2)Match
   let clickCard = [];

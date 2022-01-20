@@ -104,8 +104,7 @@ body{
  img{
 
 border-radius: 10px;
-border-color: #A55233;
-border-width:10px;
+border: 6px solid #A55233;
 position: absolute;
 width: 173px;
 height: 189px;
