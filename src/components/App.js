@@ -5,15 +5,15 @@ const doubleCards= cards.concat(cards); //almacenamos las cartas duplicadas (car
 console.log(doubleCards);
 
 //Función para aleatorizar las cartas
-function shuffle (array){  
-  for(let i = array.length - 1 ; i > 0 ;i--){
+function shuffle (puppies){  
+  for(let i = puppies.length - 1 ; i > 0 ;i--){
    let mate = Math.floor(Math.random()*(i+1));
-   let tempo = array[i];
-   array[i] = array[mate];
-   array[mate] = tempo;
+   let tempo = puppies[i];
+   puppies[i] = puppies[mate];
+   puppies[mate] = tempo;
    }
   }
-
+  
   //Declaramos dos arrays: 1)Cartas clickeadas 2)Match
   let clickCard = [];
   let matchedCard = [];

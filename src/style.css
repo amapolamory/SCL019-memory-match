@@ -112,10 +112,9 @@ body{
   grid-gap:20px;
   grid-template-columns: (4, 40px);
   grid-template-rows: (3,30px);
- 
- 
-}
-img{
+ }
+
+ img{
 /* width: 80%;
 height: 40%; */
 border-radius: 10px;
@@ -125,6 +124,8 @@ position: absolute;
 width: 173px;
 height: 189px;
 top: 0.5;
+
+
 }
 .frontFace,.backFace{
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
