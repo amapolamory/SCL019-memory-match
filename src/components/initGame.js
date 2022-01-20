@@ -1,39 +1,44 @@
 
 
 const initGame = () => {
+  
 
   //Aquí va función para ocultar la página de inicio
      const startGame = () => { 
         
-    document.getElementsByClassName('container');
-    container.style.display = 'none';
+    document.getElementsByClassName('modal');
+    modal.style.display = 'none';
     //document.getElementById('root').appendChild(initGame()); 
     }
     
   
 // container padre
-const container = document.createElement('div');
-  container.className = 'container'; 
-
+const modalContainer = document.createElement('div');
+  modalContainer.className = 'modalContainer'; 
   
+  const modal = document.createElement('div');
+  modal.className = 'modal';
+  modalContainer.appendChild(modal);
 
 //contenedor Título
 const title1 = document.createElement('div');
 title1.className = 'title1';
-container.appendChild(title1); 
+modal.appendChild(title1); 
 
 
 
 //div hijo que almacena el gif animado
 const contGif = document.createElement('div');
 contGif.className = 'dogSmile';
-container.appendChild(contGif); 
+modal.appendChild(contGif); 
 
   
 //div hijo de container que almacena el botón start
      const contStart = document.createElement('div');//   contStart.className = 'start';
      contStart.className = 'start';
-     container.appendChild(contStart); 
+     modal.appendChild(contStart); 
+
+
      contStart.addEventListener('click', startGame);
     // contStart.addEventListener('click', App);
      
@@ -41,10 +46,10 @@ container.appendChild(contGif);
 const footer = document.createElement('footer');
 footer.textContent= "© 2022 Laboratoria - Creado por Amapola Mory & Mayorlen Ortega"
 footer.className = 'footer';
-container.appendChild(footer); 
+modal.appendChild(footer); 
 
   
-  return container;
+  return modal;
 };
 
 export default initGame;
