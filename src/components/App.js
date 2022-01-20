@@ -2,15 +2,15 @@ import puppies from '../data/puppies/puppies.js';
 
 const cards = puppies.items;  
 const doubleCards= cards.concat(cards); //almacenamos las cartas duplicadas (cards+cards)
-console.log(doubleCards);
+
 
 //Función para aleatorizar las cartas
-function shuffle (puppies){  
-  for(let i = puppies.length - 1 ; i > 0 ;i--){
+function shuffle (doubleCards){  
+  for(let i = doubleCards.length - 1 ; i > 0 ;i--){
    let mate = Math.floor(Math.random()*(i+1));
-   let tempo = puppies[i];
-   puppies[i] = puppies[mate];
-   puppies[mate] = tempo;
+   let tempo = doubleCards[i];
+   doubleCards[i] = doubleCards[mate];
+   doubleCards[mate] = tempo;
    }
   }
   
@@ -30,7 +30,7 @@ function shuffle (puppies){
       cardsGrid.id = 'cardsGrid';
       cardsGrid.className = 'cardsGrid';
       gameContainer.appendChild(cardsGrid); //cardsGrid se crea como hijo de gameContainer 
-      console.log(cardsGrid);
+    
 
       
 
@@ -51,7 +51,7 @@ function shuffle (puppies){
          let backFace = document.createElement('img');
          boardCard.appendChild(backFace)
          backFace.setAttribute('src' ,'./img/reverso_carta.png');
-         console.log(backFace);
+         
 
          let frontFace = document.createElement('div');
 
