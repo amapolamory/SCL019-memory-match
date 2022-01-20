@@ -68,7 +68,7 @@ body{
   background-size: contain;
   position:absolute;
   left: 43%;
-  top: 30%; 
+  top: 40%; 
   border: 8px solid #F3BC77;
   border-radius: 20px;
 }
@@ -80,7 +80,7 @@ body{
   background-size: contain;
   position:absolute;
   left: 46%;
-  top: 70%; 
+  top: 80%; 
 }
 
 .start:hover{
@@ -90,23 +90,56 @@ body{
     background-size: contain;
     position:absolute;
     left: 46%;
-    top: 70%; 
+    top: 80%; 
   }
 
   .footer{
     padding: 5%;
     position:absolute;
-    top: 75%;
+    top: 85%;
   } 
 
  /*Elementos externos del juego*/
 
  h1{
    color: #F0DAB1;
-   font-size: 5vw;
+   font-size: 6vw;
    display: flex;
    justify-content: center;
    -webkit-text-stroke: 1px #A55233;
+ }
+ .timeMove{
+   display:grid;
+   grid-template-columns: repeat(2, 20%);
+   justify-content: center;
+   
+  
+ }
+
+ h2{
+   color:#F3BC77;
+   font-size: 2vw;
+
+ }
+
+ .dogRight{
+   background-image: url('img/Loser.png');
+   background-size: contain;
+   position: absolute;
+   width:10%;
+   height: 10%;
+
+
+
+ }
+
+ .dogLeft{
+   background-image: url('img/Loser.jpg');
+   background-size: contain;
+   position: absolute;
+   width:10%;
+   height: 10%;
+
 
  }
  .instruction{
@@ -122,6 +155,8 @@ body{
    position: absolute;
    width: 15%;
    height: 50%;
+   margin-left: 3em;
+  
   }
    
    
@@ -145,7 +180,7 @@ body{
   flex-direction: row;
   padding: 17% 40% 17% 40%;
   position: relative;
-  top: 20%;
+  top: 10%;
   left: 1%;
  }
 
@@ -154,8 +189,8 @@ body{
 border-radius: 10px;
 border: 6px solid #A55233;
 position: absolute;
-width: 9%;
-height: 16%;
+width: 16vh;
+height: 19vh;
 top: 0.5;
 transform :scale(1);
 

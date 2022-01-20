@@ -33,6 +33,16 @@ shuffle();
       instruction.className = 'instruction';
       gameContainer.appendChild(instruction);
 
+      const dogLeft = document.createElement('div');
+      dogLeft.className = 'dogLeft';
+      gameContainer.appendChild(dogLeft);
+
+      const dogRight = document.createElement('div');
+      dogRight.className = 'dogRigth';
+      gameContainer.appendChild(dogRight);
+
+      
+
           // CONTENEDOR DEL GRID DE CARTAS
       const cardsGrid= document.createElement('div');
       cardsGrid.id = 'cardsGrid';
