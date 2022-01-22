@@ -5,51 +5,44 @@ const initGame = () => {
 
   //Aquí va función para ocultar la página de inicio
      const startGame = () => { 
-        
-    document.getElementsByClassName('modal');
-    modal.style.display = 'none';
-    //document.getElementById('root').appendChild(initGame()); 
+        location.href = "./game.html"; 
     }
     
   
 // container padre
-const modalContainer = document.createElement('div');
-  modalContainer.className = 'modalContainer'; 
+const container = document.createElement('div');
+  container.className = 'container'; 
   
-  const modal = document.createElement('div');
-  modal.className = 'modal';
-  modalContainer.appendChild(modal);
-
-//contenedor Título
+ //contenedor Título
 const title1 = document.createElement('div');
 title1.className = 'title1';
-modal.appendChild(title1); 
+container.appendChild(title1); 
 
 
 
 //div hijo que almacena el gif animado
 const contGif = document.createElement('div');
 contGif.className = 'dogSmile';
-modal.appendChild(contGif); 
+container.appendChild(contGif); 
 
   
 //div hijo de container que almacena el botón start
      const contStart = document.createElement('div');//   contStart.className = 'start';
      contStart.className = 'start';
-     modal.appendChild(contStart); 
+     container.appendChild(contStart); 
 
 
      contStart.addEventListener('click', startGame);
-    // contStart.addEventListener('click', App);
+    
      
      //pié de página
 const footer = document.createElement('footer');
 footer.textContent= "© 2022 Laboratoria - Creado por Amapola Mory & Mayorlen Ortega"
 footer.className = 'footer';
-modal.appendChild(footer); 
+container.appendChild(footer); 
 
   
-  return modal;
+  return container;
 };
 
 export default initGame;
