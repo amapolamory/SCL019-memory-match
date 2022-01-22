@@ -153,7 +153,15 @@ body{
    box-shadow: black 0.5em 0.5em 0.2em;
   }
 
-  
+  .timer{
+    background-image: url('img/startTime.png');
+    width: 30%;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 600 px; 
+
+   }
    
    
  
