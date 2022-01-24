@@ -1,9 +1,9 @@
 import puppies from '../data/puppies/puppies.js';
 
 const cards = puppies.items;  
-const doubleCards= cards.concat(cards); //almacenamos las cartas duplicadas (cards+cards)
+const doubleCards= cards.concat(cards); // almacenamos las cartas duplicadas (cards+cards)
 
-//aleotizar cartas
+// aleotizar cartas
 const shuffle = () => {
   const cardData = doubleCards;
   cardData.sort(() => Math.random() - 0.5)
@@ -14,21 +14,21 @@ const shuffle = () => {
 shuffle();
 
   
-  //Declaramos dos arrays: 1)Cartas clickeadas 2)Match
+  // Declaramos dos arrays: 1)Cartas clickeadas 2)Match 
   let clickCard = [];
   let matchedCard = [];
  
   
 
-  //Función para crear estructura y añadir funcionalidad al juego
+  // Función para crear estructura y añadir funcionalidad al juego
   const App = () => {
 
 
-    // CONTENEDOR PADRE DEL JUEGO
+  // CONTENEDOR PADRE DEL JUEGO
     const gameContainer= document.createElement('div');
     gameContainer.className= 'gameContainer';   
 
-    //Elementos externos del juego
+  // Elementos externos del juego
       const instruction = document.createElement('div');
       instruction.className = 'instruction';
       gameContainer.appendChild(instruction);
@@ -43,7 +43,7 @@ shuffle();
 
       
 
-          // CONTENEDOR DEL GRID DE CARTAS
+  // CONTENEDOR DEL GRID DE CARTAS
       const cardsGrid= document.createElement('div');
       cardsGrid.id = 'cardsGrid';
       cardsGrid.className = 'cardsGrid';
@@ -51,14 +51,14 @@ shuffle();
     
      
            
-      // FUNCIÓN QUE MUESTRA LAS CARTAS DEL GRID
+  // FUNCIÓN QUE MUESTRA LAS CARTAS DEL GRID
       const gridBoard = function() {
 
         cardsGrid.innerHTML = "";
-        // RECORRE LA DATA
+  // RECORRE LA DATA
         for (let i = 0; i < doubleCards.length; i++ ){
 
-        // INSERTA IMAGENES EN FRONTFACE Y BACKFACE
+  // INSERTA IMAGENES EN FRONTFACE Y BACKFACE
          let boardCard = document.createElement('div');
          boardCard.className ='boardCard';
          cardsGrid.appendChild(boardCard);
@@ -112,7 +112,7 @@ function matchComplete(arrayOfClickCard){
       matchedCard++;
       // si se completaron los 6 match que se abra el modal
           if (matchedCard === 6){
-        window.location()//pagina del modal
+        // window.location()//pagina del modal
    
         for (let i = 0 ; i <= 11 ; i++ ){//recorre la data si no ha encontrado todos los match
           doubleCards[i].matched = false;
@@ -130,7 +130,7 @@ function matchComplete(arrayOfClickCard){
         
 
 }
-  return gameContainer //Consultar
+  return gameContainer
 
 };
  export default App; 

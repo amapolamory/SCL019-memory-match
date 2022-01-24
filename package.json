@@ -29,5 +29,8 @@
   },
   "jest": {
     "testEnvironment": "jsdom"
+  },
+  "dependencies": {
+    "http-proxy-middleware": "^2.0.1"
   }
 }
