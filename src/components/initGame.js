@@ -1,11 +1,13 @@
+import App from "./App";
+
 const initGame = () => {
   
-
   //Aquí va función para ocultar la página de inicio
      function startGame() { 
-      window.location = "./game.html";
-      
-    }
+      document.getElementsByClassName('container');
+        container.style.display = 'none';
+        
+}
    
   
 // container padre
@@ -31,7 +33,7 @@ container.appendChild(contGif);
      container.appendChild(contStart); 
 
 
-     contStart.addEventListener('click', startGame)
+     contStart.addEventListener('click', startGame);
     
      
      //pié de página
