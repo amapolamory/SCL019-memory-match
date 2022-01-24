@@ -1,11 +1,12 @@
-import App from "./App";
+import App from "./App.js";
 
 const initGame = () => {
   
   //Aquí va función para ocultar la página de inicio
-     function startGame() { 
+    const startGame = () =>  { 
       document.getElementsByClassName('container');
         container.style.display = 'none';
+        document.getElementById('root').appendChild(App());
         
 }
    

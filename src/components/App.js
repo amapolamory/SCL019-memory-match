@@ -29,6 +29,22 @@ shuffle();
     gameContainer.className= 'gameContainer';   
 
   // Elementos externos del juego
+
+      const titleGame = document.createElement('h1');
+      titleGame.className = 'titleGame';
+      titleGame.textContent = 'Puppy Match';
+      gameContainer.appendChild(titleGame);
+
+      const timer = document.createElement('h2');
+      timer.className = 'timer';
+      timer.textContent= 'timer';
+      titleGame.appendChild(timer);
+
+      const moves = document.createElement('h2');
+      moves.className = 'moves';
+      moves.textContent= 'moves';
+      titleGame.appendChild(moves);
+
       const instruction = document.createElement('div');
       instruction.className = 'instruction';
       gameContainer.appendChild(instruction);
@@ -135,3 +151,4 @@ function matchComplete(arrayOfClickCard){
 };
  export default App; 
  export {shuffle};
+ export {App};

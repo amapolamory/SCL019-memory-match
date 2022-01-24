@@ -87,30 +87,37 @@ body{
   } 
 
  /*Elementos externos del juego*/
+.titleGame{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+  position: relative;
 
+}
  h1{
    color: #F0DAB1;
    font-size: 6vw;
-   display: flex;
-   justify-content: center;
    -webkit-text-stroke: 4px #A55233;
    font-family: 'Sniglet', cursive;
    text-shadow: black 0.1em 0.1em 0.2em;
-   
- }
- .timeMove{
-   display:grid;
-   grid-template-columns: repeat(2, 20%);
-   justify-content: center;
-    -webkit-text-stroke: 1px #A55233;
-    
-   
   
  }
 
+.timer, .moves{
+
+ 
+  
+}
  h2{
    color:#F3BC77;
    font-size: 2vw;
+ 
+   
 
  }
  .dogRigth{
@@ -158,15 +165,6 @@ body{
    box-shadow: black 0.5em 0.5em 0.2em;
   }
 
-  .timer{
-    background-image: url('img/startTime.png');
-    width: 30%;
-    height: 100px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-left: 600 px; 
-
-   }
    
    
  
