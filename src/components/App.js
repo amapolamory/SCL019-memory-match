@@ -96,7 +96,7 @@ shuffle();
 
          let frontFace = document.createElement('div');
 
-          //segun lo que entiendo si hace un match se remplaza la imagen del backface 
+          //segun lo que entiendo si hace un match se remplaza la imagen del backface permanentemente para que no se de vuelta
           //por la que hizo match de frontface   
          if(doubleCards[i].matched){
           backFace.setAttribute('src', doubleCards[i].image)
