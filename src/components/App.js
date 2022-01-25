@@ -30,20 +30,28 @@ shuffle();
 
   // Elementos externos del juego
 
-      const titleGame = document.createElement('h1');
+      const titleGame = document.createElement('div');
       titleGame.className = 'titleGame';
       titleGame.textContent = 'Puppy Match';
       gameContainer.appendChild(titleGame);
 
-      const timer = document.createElement('h2');
+      const timeMove = document.createElement('div');
+      timeMove.className = 'timeMove';
+      gameContainer.appendChild(timeMove);
+       
+      const timer = document.createElement('div');
       timer.className = 'timer';
-      timer.textContent= 'timer';
-      titleGame.appendChild(timer);
+      timer.textContent= 'Timer';
+      timeMove.appendChild(timer);
 
-      const moves = document.createElement('h2');
+      const chrono = document.createElement('div');
+      chrono.className = 'chrono';
+      timeMove.appendChild(chrono);
+
+      const moves = document.createElement('div');
       moves.className = 'moves';
-      moves.textContent= 'moves';
-      titleGame.appendChild(moves);
+      moves.textContent= 'Moves';
+      timeMove.appendChild(moves);
 
       const instruction = document.createElement('div');
       instruction.className = 'instruction';
@@ -56,6 +64,8 @@ shuffle();
       const dogRight = document.createElement('div');
       dogRight.className = 'dogRigth';
       gameContainer.appendChild(dogRight);
+
+      
 
       
 

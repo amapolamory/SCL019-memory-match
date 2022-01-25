@@ -87,39 +87,64 @@ body{
   } 
 
  /*Elementos externos del juego*/
+ 
+ .gameContainer{
+  display: flex;
+  flex-wrap:wrap;
+  align-items: center;
+}
+
 .titleGame{
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   align-self: center;
   position: relative;
-
+  color: #F0DAB1;
+  font-size: 6vw;
+  -webkit-text-stroke: 4px #A55233;
+  font-family: 'Sniglet', cursive;
+  font-weight: bold;
+  text-shadow: black 0.1em 0.1em 0.2em;
 }
- h1{
-   color: #F0DAB1;
-   font-size: 6vw;
-   -webkit-text-stroke: 4px #A55233;
-   font-family: 'Sniglet', cursive;
-   text-shadow: black 0.1em 0.1em 0.2em;
-  
- }
-
-.timer, .moves{
-
- 
-  
-}
- h2{
-   color:#F3BC77;
-   font-size: 2vw;
- 
+  .timeMove{
+   display: flex;
+   flex-direction: row;
+   position: absolute;
+   margin-left: 500px;
+   margin-bottom: 500px;
    
+   
+  
+}
 
- }
+.timer{
+  color:#F3BC77;
+  font-size: 2vw;
+  position: relative;
+  margin: 60px;
+  
+  
+
+} .moves{
+  color:#F3BC77;
+  font-size: 2vw;
+  position: relative;
+  margin: 60px;
+}
+
+.chrono{
+  display: flex;
+   background-image: url('img/startTime.png');
+   background-size: contain;
+   background-repeat: no-repeat;
+   width: 70px;
+   height: 50px;
+   align-self: center;
+}
+
  .dogRigth{
   background-image: url('img/dogTime.png');
   background-repeat: no-repeat;
@@ -165,17 +190,11 @@ body{
    box-shadow: black 0.5em 0.5em 0.2em;
   }
 
-   
+  
    
  
 /* App */
-.gameContainer{
-  display: flex;
-  flex-wrap:wrap;
-  justify-content: left;
-  align-items: center;
- 
-}
+
 .cardsGrid{
   display:grid ;
   grid-template-columns: repeat(4, 55%);
