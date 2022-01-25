@@ -122,10 +122,21 @@ body{
   font-size: 2vw;
   position: relative;
   margin: 60px;
+ 
   
   
 
-} .moves{
+} 
+
+span{
+
+  width:80px;
+  height: 80px;
+  align-self:auto ;
+  justify-self: auto;
+  background-color: aquamarine;
+}
+.moves{
   color:#F3BC77;
   font-size: 2vw;
   position: relative;
