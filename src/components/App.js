@@ -46,7 +46,7 @@ shuffle();
 
       const chrono = document.createElement('div');
       chrono.className = 'chrono';
-      timeMove.appendChild(chrono);
+      gameContainer.appendChild(chrono);
 
       const moves = document.createElement('div');
       moves.className = 'moves';

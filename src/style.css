@@ -115,9 +115,6 @@ body{
    position: absolute;
    margin-left: 500px;
    margin-bottom: 500px;
-   
-   
-  
 }
 
 .timer{
@@ -137,12 +134,15 @@ body{
 
 .chrono{
   display: flex;
+  border-radius: 10px;
    background-image: url('img/startTime.png');
    background-size: contain;
    background-repeat: no-repeat;
    width: 70px;
-   height: 50px;
+   height: 45px;
    align-self: center;
+   box-shadow: black 0.5em 0.5em 0.2em;
+   
 }
 
  .dogRigth{
