@@ -84,7 +84,24 @@ body{
     padding: 5%;
     position:absolute;
     top: 85%;
+    font-size: 1vw;
+    animation-duration: 2s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
   } 
+
+  @keyframes slidein {
+    from {
+      margin-left: 80%;
+      width: 130%
+    }
+  
+    to {
+      margin-left: 50%;
+      width: 80%;
+    }
+  }
 
  /*Elementos externos del juego*/
  
@@ -143,30 +160,34 @@ span{
 }
 
 .chrono{
-  display: flex;
   border-radius: 10px;
+  border:4px solid #A55233;
   background-image: url('img/startTime.png');
-  background-size: contain;
   background-repeat: no-repeat;
-  width: 70px;
-  height: 45px;
-  align-self: center;
-  box-shadow: black 0.5em 0.5em 0.2em;
-   
-   
-}
-
- .dogRigth{
-  background-image: url('img/dogTime.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: absolute;
+  background-size:cover;
   display: flex;
   justify-content: center;
-   width:60;
-  height: 40%;
- 
-}
+  position:absolute;
+  width: 14%;
+  height: 20%;
+  margin-left: 74%;
+  box-shadow: black 0.5em 0.5em 0.2em;
+  }
+
+ .dogRigth{
+   background-image: url('img/perrito.gif');
+   background-repeat: no-repeat;
+   background-size: contain;
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   position:absolute;
+   width: 12%;
+   height: 12%;
+   margin-left: 77%;
+   margin-bottom: 14%;
+   animation-iteration-count:infinite;
+ }
  
  .dogLeft{
    background-image: url('img/dogInstructions.png');
@@ -178,8 +199,8 @@ span{
    position:absolute;
    width:10%;
    height: 30%;
-   margin-left: 6em;
-   margin-bottom: 28em;
+   margin-left: 11%;
+   margin-bottom: 30%;
    
    
  }
@@ -197,7 +218,7 @@ span{
    position:absolute;
    width: 15%;
    height: 50%;
-   margin-left: 3em;
+   margin-left: 7%;
    box-shadow: black 0.5em 0.5em 0.2em;
   }
 

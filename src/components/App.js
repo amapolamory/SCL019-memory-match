@@ -42,11 +42,12 @@ const App = () => {
   const timer = document.createElement('div');
   timer.className = 'timer';
   timer.id = 'timer';
-  timer.textContent = 'Timer';
+  timer.textContent = 'Timer: ';
   timeMove.appendChild(timer);
 
   const minute = document.createElement('span');
   minute.id = 'minute';
+  minute.textContent = ' 01:00'
   timer.appendChild(minute);
 
 
@@ -56,8 +57,13 @@ const App = () => {
 
   const moves = document.createElement('div');
   moves.className = 'moves';
-  moves.textContent = 'Moves';
+  moves.textContent = 'Moves:';
   timeMove.appendChild(moves);
+
+  const countMoves = document.createElement('span');
+  countMoves.id = 'countMoves';
+  countMoves.textContent = ' 1'
+  moves.appendChild(countMoves);
 
   const instruction = document.createElement('div');
   instruction.className = 'instruction';
