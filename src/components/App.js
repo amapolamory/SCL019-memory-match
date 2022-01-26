@@ -167,7 +167,7 @@ const App = () => {
         seconds--;
         counter.innerHTML =
           "0:" + (seconds < 10 ? "0" : "") + String(seconds);
-        if (seconds > 0) {
+        if (seconds > 1) {
           setTimeout(tick, 1000);
         }
         console.log(tick);
