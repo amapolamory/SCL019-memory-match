@@ -161,9 +161,6 @@ const App = () => {
       else (gridBoard())
       arrayOfClickCard.length = 0;
     }
-<<<<<<< HEAD
-    
-=======
     console.log(matchedCard);
     function countdown() {
       let seconds = 59;
@@ -188,7 +185,6 @@ const App = () => {
       tick();
     }
     countdown();
->>>>>>> 5bf030723a9cc4394ff925fdd0d4489f5410fe4d
 
 
   }
