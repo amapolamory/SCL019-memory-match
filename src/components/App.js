@@ -1,5 +1,7 @@
 import puppies from '../data/puppies/puppies.js';
 
+
+
 const cards = puppies.items;
 const doubleCards = cards.concat(cards); // almacenamos las cartas duplicadas (cards+cards)
 
@@ -168,7 +170,7 @@ const App = () => {
       arrayOfClickCard.length = 0;
     }
     console.log(matchedCard);
-   
+   chrono.addEventListener('click', countdown);
 
   }
   return gameContainer
