@@ -1,4 +1,4 @@
-x
+
 function countdown() {
     let seconds = 59;
     function tick() {
