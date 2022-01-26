@@ -49,6 +49,7 @@ const App = () => {
   minute.id ='minute';
   timer.appendChild(minute);
 
+
   const chrono = document.createElement('div');
   chrono.className = 'chrono';
   gameContainer.appendChild(chrono);
