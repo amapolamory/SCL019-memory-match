@@ -8,7 +8,7 @@ const shuffle = () => {
   const cardData = doubleCards;
   cardData.sort(() => Math.random() - 0.5)
   return cardData;
-
+ 
 };
 
 shuffle();
@@ -16,7 +16,7 @@ shuffle();
 
 // Declaramos dos arrays: 1)Cartas clickeadas 2)Match 
 let clickCard = [];
-let matchedCard = [];
+let matchedCard = [];//Guarda la cantidad de cartas que han hecho match
 
 
 
@@ -41,12 +41,12 @@ const App = () => {
 
   const timer = document.createElement('div');
   timer.className = 'timer';
-  timer.id ='timer';
+  timer.id = 'timer';
   timer.textContent = 'Timer';
   timeMove.appendChild(timer);
 
-  const minute= document.createElement('span');
-  minute.id ='minute';
+  const minute = document.createElement('span');
+  minute.id = 'minute';
   timer.appendChild(minute);
 
 
@@ -114,7 +114,7 @@ const App = () => {
       backFace.addEventListener('click', function () { //función que permite clickear una carta
         if (clickCard.length < 2) {                  //Sólo se puede clickear 2 cartas cada vez
           backFace.setAttribute('src', doubleCards[i].image) //Muestra imagen de carta cuando se gira
-
+          console.log(backFace);
           clickCard.push(doubleCards[i]); //Guarda cartas clickeadas en array declarado
           setTimeout(() => {            //Define el tiempo del giro de carta
             flipBack(doubleCards, backFace[i]);
@@ -132,10 +132,10 @@ const App = () => {
 
     }, 1200);
   }
+  
 
   //Función para todos los match (ganar el juego)      
   function matchComplete(arrayOfClickCard) {
-    console.log(arrayOfClickCard)
     //si las cartas presionadas son exactamente 2 que nos de true y se añadan al array
     if (arrayOfClickCard.length == 2) {
       //Si la primera carta es igual a la segunda
@@ -161,7 +161,34 @@ const App = () => {
       else (gridBoard())
       arrayOfClickCard.length = 0;
     }
+<<<<<<< HEAD
     
+=======
+    console.log(matchedCard);
+    function countdown() {
+      let seconds = 59;
+      function tick() {
+        let counter = document.getElementById('minute');
+        seconds--;
+        counter.innerHTML =
+          "0:" + (seconds < 10 ? "0" : "") + String(seconds);
+        if (seconds > 1) {
+          setTimeout(tick, 1000);
+        }
+
+        //  else {
+        //   document.getElementById("verifiBtn").innerHTML = `
+        //       <div class="Btn" id="ResendBtn">
+        //           <button type="submit">Resend</button>
+        //       </div>
+        //   `;
+        //   document.getElementById("counter").innerHTML = "";
+        // }
+      }
+      tick();
+    }
+    countdown();
+>>>>>>> 5bf030723a9cc4394ff925fdd0d4489f5410fe4d
 
 
   }
