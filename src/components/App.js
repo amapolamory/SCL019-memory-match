@@ -147,7 +147,7 @@ const App = () => {
         if (matchedCard === 6) {
           // window.location()//pagina del modal
 
-          for (let i = 0; i <= 11; i++) {//recorre la data si no ha encontrado todos los match
+          for (let i = 0; i <= 11; i++) {// recorre la data si no ha encontrado todos los match
             doubleCards[i].matched = false;
 
             // que se revuelvan las cartas una vez terminado el juego 
@@ -156,7 +156,7 @@ const App = () => {
           }
         }
       }
-      //Reiniciar función para jugar desde 0
+      // Reiniciar función para jugar desde 0
       else (gridBoard())
       arrayOfClickCard.length = 0;
     }
