@@ -130,8 +130,8 @@ body{
    display: flex;
    flex-direction: row;
    position: absolute;
-   margin-left: 500px;
-   margin-bottom: 550px;
+   margin-left: 30%;
+   margin-bottom: 35%;
 }
 
 .timer{
@@ -161,15 +161,15 @@ span{
 
 .chrono{
   border-radius: 10px;
-  border:4px solid #A55233;
+  border:5px solid #A55233;
   background-image: url('img/startTime.png');
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size:contain;
   display: flex;
   justify-content: center;
   position:absolute;
   width: 14%;
-  height: 20%;
+  height: 18%;
   margin-left: 74%;
   box-shadow: black 0.5em 0.5em 0.2em;
   }
