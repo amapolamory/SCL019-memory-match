@@ -161,35 +161,8 @@ const App = () => {
       else (gridBoard())
       arrayOfClickCard.length = 0;
     }
-<<<<<<< HEAD
-    
-=======
     console.log(matchedCard);
-    function countdown() {
-      let seconds = 59;
-      function tick() {
-        let counter = document.getElementById('minute');
-        seconds--;
-        counter.innerHTML =
-          "0:" + (seconds < 10 ? "0" : "") + String(seconds);
-        if (seconds > 1) {
-          setTimeout(tick, 1000);
-        }
-
-        //  else {
-        //   document.getElementById("verifiBtn").innerHTML = `
-        //       <div class="Btn" id="ResendBtn">
-        //           <button type="submit">Resend</button>
-        //       </div>
-        //   `;
-        //   document.getElementById("counter").innerHTML = "";
-        // }
-      }
-      tick();
-    }
-    countdown();
->>>>>>> 5bf030723a9cc4394ff925fdd0d4489f5410fe4d
-
+   
 
   }
   return gameContainer
