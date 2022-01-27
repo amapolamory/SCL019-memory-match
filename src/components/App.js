@@ -84,6 +84,28 @@ const App = () => {
   gameContainer.appendChild(dogRight);
 
 
+// Modal
+const modalCont = document.createElement('div');
+modalCont.className = 'modalCont';
+gameContainer.appendChild(modalCont);
+
+const modalInt = document.createElement('div');
+modalInt.className = 'modalInt';
+modalCont.appendChild(modalInt);
+
+const modalTitle = document.createElement('div');
+modalTitle.className = 'modalTitle';
+modalTitle.textContent = 'You Win';
+modalInt.appendChild(modalTitle);
+
+const dogWin = document.createElement('div');
+dogWin.className = 'dogWin';
+modalInt.appendChild(dogWin);
+
+const restart = document.createElement('div');
+restart.className = 'restart';
+modalInt.appendChild(restart);
+restart.textContent = 'Restart'
 
 
 
