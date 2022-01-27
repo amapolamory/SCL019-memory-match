@@ -163,6 +163,7 @@ span{
   border-radius: 10px;
   border:5px solid #A55233;
   background-image: url('img/startTime.png');
+  background-color: #F0DAB1;
   background-repeat: no-repeat;
   background-size:contain;
   display: flex;
@@ -260,9 +261,51 @@ img:hover{
   transition:transform .3s;
 }
 
+.modalCont{
+      
+      position: fixed; 
+			z-index: 1;
+			padding-top: 100px;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%; 
+			overflow: auto; 
+			background-color: rgb(0,0,0);
+			background-color: rgba(0,0,0,0.4);
+}
 
+.modalTitle{
+  text-align: center;
+  color: #A55233;
+  font-size: 50px;
+}
 
+.modalInt{
+      background-color: rgba(113,201,206);
+      margin: auto;
+      
+      border: 10px solid #E3FDFD;
+      width: 50%;
+      height: 65%;
+}
 
+.dogWin{
+  background-image: url('./img/dogWin.gif');
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 50%;
+  margin-left: 210px;
+}
 
-
-
+.restart{
+  background-color: #A55233;
+  width: 200px;
+  height: 60px;
+  border-radius: 5px;
+  border: 4px solid #F3BC77;
+  text-align: center;
+  color:#F3BC77;
+  margin-left: 210px;
+  margin-top: 50px;
+}
