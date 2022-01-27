@@ -110,7 +110,26 @@ const App = () => {
   const restart = document.createElement('div');
   restart.className = 'restart';
   modalInt.appendChild(restart);
+  restart.id = 'restart';
   restart.textContent = 'Restart';
+
+
+
+
+  const close = document.createElement('span');
+  close.className = 'close';
+  close.id = 'close';
+  close.textContent= 'x';
+  modalInt.appendChild(close);
+
+  const closeModal = () => {
+    document.getElementById(modalCont);
+    modalCont.style.display = 'none';
+  }
+  closeModal();
+
+  close.addEventListener('click', closeModal);
+ 
 
 
   // CONTENEDOR DEL GRID DE CARTAS
@@ -207,7 +226,7 @@ const App = () => {
       arrayOfClickCard.length = 0;
     }
     console.log(matchedCard);
-    chrono.addEventListener('click', countdown);
+    
 
   }
   return gameContainer
