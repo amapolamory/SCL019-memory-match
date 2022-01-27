@@ -290,7 +290,14 @@ img:hover{
 			background-color: rgb(0,0,0);
 			background-color: rgba(0,0,0,0.4);
 }
-
+.modalInt {
+  background-color: rgba(113,201,206);
+  margin: auto;
+  border: 10px solid #E3FDFD;
+  border-radius: 8%;
+  width: 50%;
+  height: 70%;
+}
 .modalTitle{
 
   text-align: center;
@@ -298,13 +305,22 @@ img:hover{
   font-size: 50px;
 }
 
-.modalInt {
-      background-color: rgba(113,201,206);
-      margin: auto;
-      border: 10px solid #E3FDFD;
-      width: 50%;
-      height: 70%;
+.close{
+  color:grey;
+  float:right;
+  margin-bottom:100px;
+  font-size:30px;
+  
 }
+  .close:hover,
+ .close:focus {
+			color: #000;
+			text-decoration: none;
+			cursor: pointer;
+		}
+
+
+
 
 .dogWin{
   background-image: url('./img/dogWin.gif');
