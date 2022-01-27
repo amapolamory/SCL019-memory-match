@@ -10,7 +10,7 @@ const shuffle = () => {
   const cardData = doubleCards;
   cardData.sort(() => Math.random() - 0.5)
   return cardData;
- 
+
 };
 
 shuffle();
@@ -49,13 +49,17 @@ const App = () => {
 
   const minute = document.createElement('span');
   minute.id = 'minute';
-  minute.textContent = ' 01:00'
+  minute.textContent = ' 00:00'
   timer.appendChild(minute);
 
 
   const chrono = document.createElement('div');
   chrono.className = 'chrono';
+  chrono.id = 'chrono';
   gameContainer.appendChild(chrono);
+ 
+
+
 
   const moves = document.createElement('div');
   moves.className = 'moves';
@@ -140,7 +144,7 @@ const App = () => {
 
     }, 1200);
   }
-  
+
 
   //Función para todos los match (ganar el juego)      
   function matchComplete(arrayOfClickCard) {
@@ -170,7 +174,7 @@ const App = () => {
       arrayOfClickCard.length = 0;
     }
     console.log(matchedCard);
-   chrono.addEventListener('click', countdown);
+    chrono.addEventListener('click', countdown);
 
   }
   return gameContainer
