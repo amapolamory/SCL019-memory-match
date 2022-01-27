@@ -57,7 +57,7 @@ const App = () => {
   chrono.className = 'chrono';
   chrono.id = 'chrono';
   gameContainer.appendChild(chrono);
- 
+
 
 
 
@@ -84,29 +84,33 @@ const App = () => {
   gameContainer.appendChild(dogRight);
 
 
-// Modal
-const modalCont = document.createElement('div');
-modalCont.className = 'modalCont';
-gameContainer.appendChild(modalCont);
+  // Modal Ganador
 
-const modalInt = document.createElement('div');
-modalInt.className = 'modalInt';
-modalCont.appendChild(modalInt);
+  // modalContainer = document.createElement('div');
+  // modalContainer.className= 'modalContainer';
+  // gameContainer.appendChild(modalContainer);
 
-const modalTitle = document.createElement('div');
-modalTitle.className = 'modalTitle';
-modalTitle.textContent = 'You Win';
-modalInt.appendChild(modalTitle);
+  const modalCont = document.createElement('div');
+  modalCont.className = 'modalCont';
+  gameContainer.appendChild(modalCont);
 
-const dogWin = document.createElement('div');
-dogWin.className = 'dogWin';
-modalInt.appendChild(dogWin);
+  const modalInt = document.createElement('div');
+  modalInt.className = 'modalInt';
+  modalCont.appendChild(modalInt);
 
-const restart = document.createElement('div');
-restart.className = 'restart';
-modalInt.appendChild(restart);
-restart.textContent = 'Restart'
+  const modalTitle = document.createElement('div');
+  modalTitle.className = 'modalTitle';
+  modalTitle.textContent = 'You Win!';
+  modalInt.appendChild(modalTitle);
 
+  const dogWin = document.createElement('div');
+  dogWin.className = 'dogWin';
+  modalInt.appendChild(dogWin);
+
+  const restart = document.createElement('div');
+  restart.className = 'restart';
+  modalInt.appendChild(restart);
+  restart.textContent = 'Restart';
 
 
   // CONTENEDOR DEL GRID DE CARTAS
@@ -180,14 +184,15 @@ restart.textContent = 'Restart'
         matchedCard++;
         // si se completaron los 6 match que se abra el modal
         if (matchedCard === 6) {
-          //  direccionar al modal
 
           for (let i = 0; i <= 11; i++) {// Impide hacer match sobre match y activa shuffle
             doubleCards[i].matched = false;
+            
 
             // que se revuelvan las cartas una vez terminado el juego 
             shuffle(doubleCards);
             matchedCard = 0;
+
           }
         }
       }
