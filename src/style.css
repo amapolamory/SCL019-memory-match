@@ -262,7 +262,7 @@ img:hover{
 }
 
 .modalCont{
-      
+      display: none;
       position: fixed; 
 			z-index: 1;
 			padding-top: 100px;
@@ -284,7 +284,6 @@ img:hover{
 .modalInt{
       background-color: rgba(113,201,206);
       margin: auto;
-      
       border: 10px solid #E3FDFD;
       width: 50%;
       height: 65%;

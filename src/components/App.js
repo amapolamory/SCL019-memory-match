@@ -177,6 +177,10 @@ restart.textContent = 'Restart'
         // si se completaron los 6 match que se abra el modal
         if (matchedCard === 6) {
           //  direccionar al modal
+          const modal = () => {
+            modalCont.style.display = 'block';
+          }
+          modal();
 
           for (let i = 0; i <= 11; i++) {// Impide hacer match sobre match y activa shuffle
             doubleCards[i].matched = false;
