@@ -285,7 +285,6 @@ img:hover{
 .modalInt {
       background-color: rgba(113,201,206);
       margin: auto;
-      display: none;
       border: 10px solid #E3FDFD;
       width: 50%;
       height: 70%;
