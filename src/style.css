@@ -178,7 +178,6 @@ span{
   }
 
   .chronos:hover{
-  background-color: ;
   border:5px solid #A55233;
   background-image: url('img/startTime.png');
   background-repeat: no-repeat;
@@ -289,6 +288,7 @@ img:hover{
 			overflow: auto; 
 			background-color: rgb(0,0,0);
 			background-color: rgba(0,0,0,0.4);
+      z-index: 1;
 }
 .modalInt {
   background-color: rgba(113,201,206);
@@ -328,6 +328,7 @@ img:hover{
   width: 50%;
   height: 50%;
   margin-left: 210px;
+  z-index: 1;
 }
 
 .restart{
