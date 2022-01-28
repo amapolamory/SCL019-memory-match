@@ -31,8 +31,13 @@ const App = () => {
       setInterval(() => {
       let timeGame = time --;
             
-      document.querySelector("#chronos").addEventListener('click',countDown);
+    const click =  document.querySelector("#chronos").addEventListener('click',countDown, true);
       document.querySelector('#minute').innerHTML = timeGame; 
+      if(click==false){
+      timeGame = false;
+      }
+      else click;
+      
       
       
       }, 1000);
