@@ -25,6 +25,18 @@ let matchedCard = [];//Guarda la cantidad de cartas que han hecho match
 // Función para crear estructura y añadir funcionalidad al juego
 const App = () => {
 
+   const countDown = () => {
+      let time = 60;
+      
+      setInterval(() => {
+      time --
+      document.querySelector('#minute').innerHTML = time; 
+      }, 1000);
+      
+  }
+  countDown();
+  
+
 
   // CONTENEDOR PADRE DEL JUEGO
   const gameContainer = document.createElement('div');
@@ -41,6 +53,11 @@ const App = () => {
   timeMove.className = 'timeMove';
   gameContainer.appendChild(timeMove);
 
+  const chronos = document.createElement('div');
+  chronos.className = 'chronos';
+  chronos.id = 'chronos';
+  gameContainer.appendChild(chronos);
+
   const timer = document.createElement('div');
   timer.className = 'timer';
   timer.id = 'timer';
@@ -49,17 +66,12 @@ const App = () => {
 
   const minute = document.createElement('span');
   minute.id = 'minute';
-  minute.textContent = ' 00:00'
+  // minute.textContent = ' 00:00'
   timer.appendChild(minute);
 
 
-  const chrono = document.createElement('div');
-  chrono.className = 'chrono';
-  chrono.id = 'chrono';
-  gameContainer.appendChild(chrono);
-
-
-
+  
+  
 
   const moves = document.createElement('div');
   moves.className = 'moves';
@@ -107,7 +119,7 @@ const App = () => {
   dogWin.className = 'dogWin';
   modalInt.appendChild(dogWin);
 
-  const restart = document.createElement('div');
+  const restart = document.createElement('button');
   restart.className = 'restart';
   modalInt.appendChild(restart);
   restart.id = 'restart';
@@ -138,7 +150,9 @@ const App = () => {
   cardsGrid.className = 'cardsGrid';
   gameContainer.appendChild(cardsGrid); //cardsGrid se crea como hijo de gameContainer 
 
-
+  // Funcion count
+  
+ 
 
   // FUNCIÓN QUE MUESTRA LAS CARTAS DEL GRID
   const gridBoard = function () {
@@ -225,9 +239,7 @@ const App = () => {
       else (gridBoard())
       arrayOfClickCard.length = 0;
     }
-    console.log(matchedCard);
-    
-
+     
   }
   return gameContainer
 
