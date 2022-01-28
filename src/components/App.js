@@ -34,9 +34,7 @@ const App = () => {
       chronos.addEventListener('click', setInterval);
       document.querySelector('#minute').innerHTML = time; 
       
-      if(timeGame == 40){
-        location.href='http://www.facebook.com'
-      }
+      
       
       }, 1000);
       
