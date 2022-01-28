@@ -278,13 +278,13 @@ img:hover {
   border: 10px solid #e3fdfd;
   border-radius: 8%;
   width: 50%;
-  height: 70%;
+  height: 80%;
 }
 .modalTitle {
   text-align: center;
   color: #a55233;
   font-size: 50px;
-  
+
   
   
 }
@@ -308,7 +308,7 @@ img:hover {
   background-repeat: no-repeat;
   width: 50%;
   height: 50%;
-  margin-left: 260px;
+  margin-left: 33%;
   z-index: 1;
 }
 
@@ -322,8 +322,8 @@ img:hover {
   font-size: 100%;
   padding-top: 6px;
   color: #f3bc77;
-  margin-left: 320px;
-  margin-top: 30px;
+  margin-left: 40%;
+  margin-top:5%;
   outline: 1px solid;
   outline-color: rgba(49, 138, 172, 0.4);
   transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
@@ -334,5 +334,5 @@ img:hover {
   outline-color: #a55233;
   outline-offset: 80px;
   text-shadow: 1px 1px 6px #f0dab1
-  border-shadow: 
+ 
 }
