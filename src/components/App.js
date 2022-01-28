@@ -26,14 +26,13 @@ let matchedCard = [];//Guarda la cantidad de cartas que han hecho match
 const App = () => {
 
    const countDown = () => {
-      let time = 61;
+      let time = 60;
       
       setInterval(() => {
       let timeGame = time --;
-        
-      chronos.addEventListener('click', setInterval);
-      document.querySelector('#minute').innerHTML = time; 
-      
+            
+      document.querySelector("#chronos").addEventListener('click',countDown);
+      document.querySelector('#minute').innerHTML = timeGame; 
       
       
       }, 1000);
@@ -115,10 +114,20 @@ const App = () => {
   modalInt.className = 'modalInt';
   modalCont.appendChild(modalInt);
 
+  const modalHead = document.createElement('div');
+  modalHead.className = 'modalHead';
+  modalInt.appendChild(modalHead);
+  
+  const close = document.createElement('span');
+  close.className = 'close';
+  close.id = 'close';
+  close.textContent= 'x';
+  modalHead.appendChild(close);
+
   const modalTitle = document.createElement('div');
   modalTitle.className = 'modalTitle';
   modalTitle.textContent = 'You Win!';
-  modalInt.appendChild(modalTitle);
+  modalHead.appendChild(modalTitle);
 
   const dogWin = document.createElement('div');
   dogWin.className = 'dogWin';
@@ -129,16 +138,6 @@ const App = () => {
   modalInt.appendChild(restart);
   restart.id = 'restart';
   restart.textContent = 'Restart';
-
-
-
-
-  const close = document.createElement('span');
-  close.className = 'close';
-  close.id = 'close';
-  close.textContent= 'x';
-  modalInt.appendChild(close);
-
   const closeModal = () => {
     document.getElementById(modalCont);
     modalCont.style.display = 'none';

@@ -1,117 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=Sniglet&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sniglet:wght@800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sniglet&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sniglet:wght@800&display=swap");
 
-*{
-    margin: 0 ;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    
-    background-image: url("./img/Fondo.jpg");
-    background-size: 100%;
-    background-repeat: repeat;
-    background-position:center;  
-    font-family: 'Sniglet', cursive;
-    /* overflow: hidden; */
-  }
-
-  
-  .container{
-    display: flex;
-    align-items: center;
-    align-self:center;
-    flex-direction: column;
-    background-color: rgba(113,201,206);
-    border-radius: 40px;
-    width: 650px;
-    height: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2em;
-    border: 10px solid #E3FDFD;
-   
-     
+body {
+  background-image: url("./img/Fondo.jpg");
+  background-size: 100%;
+  background-repeat: repeat;
+  background-position: center;
+  font-family: "Sniglet", cursive;
+  /* overflow: hidden; */
 }
 
-.show{
+.container {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  flex-direction: column;
+  background-color: rgba(113, 201, 206);
+  border-radius: 40px;
+  width: 650px;
+  height: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  border: 10px solid #e3fdfd;
+}
+
+.show {
   pointer-events: auto;
   opacity: 1;
 }
 
-.title1{
-    background-image: url(img/title1.png);  
-    width: 25%;
-    padding: 25%;
-    align-items: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
+.title1 {
+  background-image: url(img/title1.png);
+  width: 25%;
+  padding: 25%;
+  align-items: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
-.dogSmile{
-  background-image: url(img/dog-smile.gif);  
+.dogSmile {
+  background-image: url(img/dog-smile.gif);
   padding: 7%;
   background-size: contain;
-  position:absolute;
+  position: absolute;
   left: 43%;
-  top: 40%; 
-  border: 8px solid #F3BC77;
+  top: 40%;
+  border: 8px solid #f3bc77;
   border-radius: 20px;
 }
 
-.start{
-  background-image: url(img/Start.png);  
+.start {
+  background-image: url(img/Start.png);
   padding: 4%;
   background-repeat: no-repeat;
   background-size: contain;
-  position:absolute;
+  position: absolute;
   left: 46%;
-  top: 80%; 
+  top: 80%;
 }
 
-.start:hover{
-    background-image: url(img/Start2.png); 
-    padding: 4%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    position:absolute;
-    left: 46%;
-    top: 80%; 
+.start:hover {
+  background-image: url(img/Start2.png);
+  padding: 4%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: 46%;
+  top: 80%;
+}
+
+.footer {
+  padding: 5%;
+  position: absolute;
+  top: 85%;
+  font-size: 1vw;
+  animation-duration: 2s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 80%;
+    width: 130%;
   }
 
-  .footer{
-    padding: 5%;
-    position:absolute;
-    top: 85%;
-    font-size: 1vw;
-    animation-duration: 2s;
-    animation-name: slidein;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-  } 
-
-  @keyframes slidein {
-    from {
-      margin-left: 80%;
-      width: 130%
-    }
-  
-    to {
-      margin-left: 50%;
-      width: 80%;
-    }
+  to {
+    margin-left: 50%;
+    width: 80%;
   }
+}
 
- /*Elementos externos del juego*/
- 
- .gameContainer{
+/*Elementos externos del juego*/
+
+.gameContainer {
   display: flex;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   align-items: center;
 }
 
-.titleGame{
+.titleGame {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,137 +115,127 @@ body{
   justify-content: center;
   align-self: center;
   position: relative;
-  color: #F0DAB1;
+  color: #f0dab1;
   font-size: 6vw;
-  -webkit-text-stroke: 4px #A55233;
-  font-family: 'Sniglet', cursive;
+  -webkit-text-stroke: 4px #a55233;
+  font-family: "Sniglet", cursive;
   font-weight: bold;
   text-shadow: black 0.1em 0.1em 0.2em;
 }
-  .timeMove{
-   display: flex;
-   flex-direction: row;
-   position: absolute;
-   margin-left: 30%;
-   margin-bottom: 40%;
+.timeMove {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  margin-left: 30%;
+  margin-bottom: 40%;
 }
 
-.timer{
-  color:#F3BC77;
+.timer {
+  color: #f3bc77;
   font-size: 2vw;
   position: relative;
   margin: 60px;
- 
-   
+}
 
-} 
-
-span{
-
-  width:80px;
+span {
+  width: 80px;
   height: 80px;
-  align-self:auto ;
+  align-self: auto;
   justify-self: auto;
-  
 }
-.moves{
-  color:#F3BC77;
+.moves {
+  color: #f3bc77;
   font-size: 2vw;
   position: relative;
   margin: 60px;
 }
 
-.chronos{
+.chronos {
   border-radius: 10px;
-  border:5px solid #A55233;
-  background-image: url('img/startTime.png');
-  background-color: #F0DAB1;
+  border: 5px solid #a55233;
+  background-image: url("img/startTime.png");
+  background-color: #f0dab1;
   background-repeat: no-repeat;
-  background-size:contain;
+  background-size: contain;
   background-position: center;
-  z-index: 100;
+  z-index: 1;
   display: flex;
   justify-content: center;
-  position:absolute;
+  position: absolute;
   width: 14%;
   height: 18%;
   margin-left: 74%;
   box-shadow: black 0.5em 0.5em 0.2em;
-  }
+}
 
-  .chronos:hover{
-  border:5px solid #A55233;
-  background-image: url('img/startTime.png');
+.chronos:hover {
+  border: 5px solid #a55233;
+  background-image: url("img/startTime.png");
   background-repeat: no-repeat;
-  background-size:80%;
+  background-size: 80%;
   background-position: center;
   display: flex;
   justify-content: center;
-  position:absolute;
+  position: absolute;
   width: 14%;
   height: 18%;
   margin-left: 74%;
-  }
+}
 
- .dogRigth{
-   background-image: url('img/perrito.gif');
-   background-repeat: no-repeat;
-   background-size: contain;
-   position: absolute;
-   display: flex;
-   justify-content: center;
-   position:absolute;
-   width: 12%;
-   height: 12%;
-   margin-left: 77%;
-   margin-bottom: 14%;
-   animation-iteration-count:infinite;
- }
- 
- .dogLeft{
-   background-image: url('img/dogInstructions.png');
-   background-repeat: no-repeat;
-   background-size: contain;
-   position: absolute;
-   display: flex;
-   justify-content: center;
-   position:absolute;
-   width:10%;
-   height: 30%;
-   margin-left: 11%;
-   margin-bottom: 30%;
-   
-   
- }
+.dogRigth {
+  background-image: url("img/perrito.gif");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 12%;
+  height: 12%;
+  margin-left: 77%;
+  margin-bottom: 14%;
+  animation-iteration-count: infinite;
+}
 
- .instruction{
-   background-image: url('img/instrucciones.png');
-   background-position-y: center;
-   background-repeat: no-repeat;
-   background-color: #F0DAB1; 
-   background-size: 100%;
-   border-radius: 20px;
-   border:7px solid #A55233;
-   display: flex;
-   justify-content: center;
-   position:absolute;
-   width: 15%;
-   height: 50%;
-   margin-left: 7%;
-   box-shadow: black 0.5em 0.5em 0.2em;
-  }
+.dogLeft {
+  background-image: url("img/dogInstructions.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 10%;
+  height: 30%;
+  margin-left: 11%;
+  margin-bottom: 30%;
+}
 
-  
-   
- 
+.instruction {
+  background-image: url("img/instrucciones.png");
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-color: #f0dab1;
+  background-size: 100%;
+  border-radius: 20px;
+  border: 7px solid #a55233;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 15%;
+  height: 50%;
+  margin-left: 7%;
+  box-shadow: black 0.5em 0.5em 0.2em;
+}
+
 /* App */
 
-.cardsGrid{
-  display:grid ;
+.cardsGrid {
+  display: grid;
   grid-template-columns: repeat(4, 55%);
-  grid-template-rows: repeat(3 ,7rem);
+  grid-template-rows: repeat(3, 7rem);
   grid-gap: 10%;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   width: 94%;
   flex-direction: row;
@@ -257,91 +243,96 @@ span{
   position: relative;
   top: 10%;
   left: 1%;
- }
-
-
- img{
-border-radius: 10px;
-border: 6px solid #A55233;
-position: absolute;
-width: 16vh;
-height: 19vh;
-top: 0.5;
-transform :scale(1);
-box-shadow: black 0.5em 0.5em 0.2em;
-
-
 }
-img:hover{
+
+img {
+  border-radius: 10px;
+  border: 6px solid #a55233;
+  position: absolute;
+  width: 16vh;
+  height: 19vh;
+  top: 0.5;
+  transform: scale(1);
+  box-shadow: black 0.5em 0.5em 0.2em;
+}
+img:hover {
   transform: scale(0.95);
-  transition:transform .3s;
+  transition: transform 0.3s;
 }
 
-.modalCont{
-      display: none;
-      position: fixed; 
-			padding-top: 100px;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%; 
-			overflow: auto; 
-			background-color: rgb(0,0,0);
-			background-color: rgba(0,0,0,0.4);
-      z-index: 1;
+.modalCont {
+  position: fixed;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 .modalInt {
-  background-color: rgba(113,201,206);
+  background-color: rgba(113, 201, 206);
   margin: auto;
-  border: 10px solid #E3FDFD;
+  border: 10px solid #e3fdfd;
   border-radius: 8%;
   width: 50%;
   height: 70%;
 }
-.modalTitle{
-
+.modalTitle {
   text-align: center;
-  color: #A55233;
+  color: #a55233;
   font-size: 50px;
-}
-
-.close{
-  color:grey;
   
-  margin-bottom:1000px;
-  font-size:30px;
+  
   
 }
-  .close:hover,
- .close:focus {
-			color: #000;
-			text-decoration: none;
-			cursor: pointer;
-		}
 
+.close {
+  color: grey;
+  font-size: 30px;
+  margin-left: 550px;
+  margin-bottom: 500px;
+  
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
 
-
-
-.dogWin{
-  background-image: url('./img/dogWin.gif');
+.dogWin {
+  background-image: url("./img/dogWin.gif");
   background-repeat: no-repeat;
   width: 50%;
   height: 50%;
-  margin-left: 210px;
+  margin-left: 260px;
   z-index: 1;
 }
 
-.restart{
-  background-color: #A55233;
+.restart {
+  background-color: #a55233 !important;
   width: 100px;
   height: 60px;
   border-radius: 7px;
-  border: 4px solid #F3BC77;
+  border: 4px solid #f3bc77;
   text-align: center;
-  font-size: 110%;
-  padding-top:17px;
-  color:#F3BC77;
-  margin-left: 260px;
+  font-size: 100%;
+  padding-top: 6px;
+  color: #f3bc77;
+  margin-left: 320px;
   margin-top: 30px;
+  outline: 1px solid;
+  outline-color: rgba(49, 138, 172, 0.4);
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+.restart:hover{
+  box-shadow: inset 0 0 20px #f0dab1;
+  outline-color: #a55233;
+  outline-offset: 80px;
+  text-shadow: 1px 1px 6px #f0dab1
+  border-shadow: 
+}
