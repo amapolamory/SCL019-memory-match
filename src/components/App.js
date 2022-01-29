@@ -25,24 +25,28 @@ let matchedCard = [];//Guarda la cantidad de cartas que han hecho match
 // Función para crear estructura y añadir funcionalidad al juego
 const App = () => {
 
-  //  const countDown = () => {
-      
+   const countDown = () => {
+      let time = 60;
       
       setInterval(() => {
 
-        const show = () => {
-          
-        let time = 60;
-        let timeGame = time --;
-        minute.innerHTML = timeGame;  
-       }
+      let timeGame = time --;
+      console.log(timeGame);
+           
+      const show = () => {
+        minute.innerHTML = timeGame;   
+        
+        
+      }
       
-      chronos.addEventListener('click',show);
+       chronos.addEventListener('click',show);
       
     
   }, 1000);
       
-   
+  }
+  countDown();
+  
 
 
   // CONTENEDOR PADRE DEL JUEGO
