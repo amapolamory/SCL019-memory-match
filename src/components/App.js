@@ -34,6 +34,24 @@ const App = () => {
   };
   countDown();
 
+  // const movements = () =>{
+
+  //   let movesCounter = 0;
+  //   function incrementMoves(){
+  //     updateDisplay(++movesCounter);
+  //   };
+  //   incrementMoves();
+  //   function updateDisplay(val){
+  //     countMoves.innerHTML=val;
+  //     doubleCards
+
+  //   };
+
+  // };
+
+  // movements();
+  // console.log(movesCounter);
+
 
   // contenedor padre del juego
   const gameContainer = document.createElement("div");
@@ -72,7 +90,7 @@ const App = () => {
 
   const countMoves = document.createElement("span");
   countMoves.id = "countMoves";
-  countMoves.textContent = " 1";
+  countMoves.textContent = " 0";
   moves.appendChild(countMoves);
 
   const instruction = document.createElement("div");
@@ -134,7 +152,7 @@ const App = () => {
   restart.id = "restart";
   restart.textContent = "Restart";
 
-  
+
 
   // CONTENEDOR DEL GRID DE CARTAS
   const cardsGrid = document.createElement("div");
@@ -178,12 +196,12 @@ const App = () => {
             //Define el tiempo del giro de carta
             flipBack(doubleCards, backFace[i]);
           }, 500);
-          
+
           // Función restart desde el modal
-      const restartF = () => {
-        restart.addEventListener("click", gridBoard);
-    };
-    restartF();
+          const restartF = () => {
+            restart.addEventListener("click", gridBoard);
+          };
+          restartF();
         }
       });
     }
@@ -230,7 +248,7 @@ const App = () => {
       arrayOfClickCard.length = 0;
     }
 
-    
+
   }
   return gameContainer;
 };
