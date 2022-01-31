@@ -32,13 +32,12 @@ const App = () => {
         minute.innerHTML = timeGame;
       };
 
-      chronos.addEventListener("click", show);
+      show();
     }, 1000);
   };
-  countDown();
+  
 
-
-
+  
 
   // contenedor padre del juego
   const gameContainer = document.createElement("div");
@@ -59,6 +58,8 @@ const App = () => {
   chronos.className = "chronos";
   chronos.id = "chronos";
   gameContainer.appendChild(chronos);
+  chronos.addEventListener("click", countDown);
+
 
   const timer = document.createElement("div");
   timer.className = "timer";
