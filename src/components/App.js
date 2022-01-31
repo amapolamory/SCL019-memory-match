@@ -18,6 +18,22 @@ let matchedCard = []; //Guarda la cantidad de cartas que han hecho match
 
 // Función para crear estructura y añadir funcionalidad al juego
 const App = () => {
+  // const movements = () =>{
+
+  //   let movesCounter = 0;
+  //   function incrementMoves(){
+  //     updateDisplay(++movesCounter);
+  //   };
+  //   incrementMoves();
+  //   function updateDisplay(val){
+  //     countMoves.innerHTML=val;
+  //   };
+
+  // };
+
+  // movements();
+
+  
   const countDown = () => {
     let time = 60;
 
@@ -34,23 +50,7 @@ const App = () => {
   };
   countDown();
 
-  // const movements = () =>{
 
-  //   let movesCounter = 0;
-  //   function incrementMoves(){
-  //     updateDisplay(++movesCounter);
-  //   };
-  //   incrementMoves();
-  //   function updateDisplay(val){
-  //     countMoves.innerHTML=val;
-  //     doubleCards
-
-  //   };
-
-  // };
-
-  // movements();
-  // console.log(movesCounter);
 
 
   // contenedor padre del juego
