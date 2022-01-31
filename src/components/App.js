@@ -18,22 +18,9 @@ let matchedCard = []; //Guarda la cantidad de cartas que han hecho match
 
 // Función para crear estructura y añadir funcionalidad al juego
 const App = () => {
-  // const movements = () =>{
 
-  //   let movesCounter = 0;
-  //   function incrementMoves(){
-  //     updateDisplay(++movesCounter);
-  //   };
-  //   incrementMoves();
-  //   function updateDisplay(val){
-  //     countMoves.innerHTML=val;
-  //   };
 
-  // };
 
-  // movements();
-
-  
   const countDown = () => {
     let time = 60;
 
@@ -92,6 +79,9 @@ const App = () => {
   countMoves.id = "countMoves";
   countMoves.textContent = " 0";
   moves.appendChild(countMoves);
+
+
+
 
   const instruction = document.createElement("div");
   instruction.className = "instruction";
@@ -219,6 +209,23 @@ const App = () => {
   function matchComplete(arrayOfClickCard) {
     //si las cartas presionadas son exactamente 2 que nos de true y se añadan al array
     if (arrayOfClickCard.length == 2) {
+      const movements = () => {
+
+          let movesCounter = 0;
+          function incrementMoves() {
+            updateDisplay(++movesCounter);
+          };
+
+          incrementMoves();
+          function updateDisplay(val) {
+        
+            countMoves.innerHTML = val;
+          };
+        console.log(movesCounter);
+        
+
+      };
+      movements();
       //Si la primera carta es igual a la segunda
       if (arrayOfClickCard[0].id == arrayOfClickCard[1].id) {
         arrayOfClickCard[0].matched = true;
@@ -250,6 +257,8 @@ const App = () => {
 
 
   }
+
+
   return gameContainer;
 };
 export default App;
