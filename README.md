@@ -2,15 +2,11 @@
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
+* [1. Definición del producto](#1-definicion-del-producto)
+* [2. Historias de usuario](#2-historias-de-usuario)
 * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Consideraciones técnicas](#7-consideraciones-técnicas)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
-* [9. Checklist](#9-checklist)
+* [4. Diseño de la interfaz de usuario](#4-diseño-de-la-interfaz-de-usuario)
+
 
 ***
 
@@ -28,7 +24,7 @@ el problema (o problemas) que tiene tu usuario.
 <img src="src/readme/historiasdeusuario.png" align="center" width="800" height="400" >
 
 
-## 3. ### Diseño de la Interfaz de Usuario
+### 3. Diseño de la Interfaz de Usuario
 
 Este juego de Memory Match con tematica perruna es ideal para pasar el rato y fortalecer tu memoria.
  
