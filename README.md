@@ -20,19 +20,29 @@ el problema (o problemas) que tiene tu usuario.
 
 
 
+
+
 ### 2. Historias de usuario
 <img src="src/readme/historiasdeusuario.png" align="center" width="800" height="400" >
+
+
 
 
 ### 3. Diseño de la Interfaz de Usuario
 
 Este juego de Memory Match con tematica perruna es ideal para pasar el rato y fortalecer tu memoria.
  
- ### Prototipo de baja fidelidad
+ #### a) Prototipo de baja fidelidad
 <img src="src/readme/prototipo1.jpeg" align="center" width="800" height="600" >
 
- ### Prototipo de alta fidelidad
+ #### b) Prototipo de alta fidelidad
 <img src="src/readme/prototiposTodos.png" align="center" width="800" height="600" >
+
+#### Testeos de usabilidad
+
+
+
+
 
 
 
