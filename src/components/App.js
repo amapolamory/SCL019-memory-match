@@ -1,5 +1,6 @@
 import puppies from "../data/puppies/puppies.js";
 
+
 const cards = puppies.items;
 const doubleCards = cards.concat(cards); // almacenamos las cartas duplicadas (cards+cards)
 
@@ -16,6 +17,7 @@ shuffle();
 let clickCard = [];
 let matchedCard = []; //Guarda la cantidad de cartas que han hecho match
 
+
 // Función para crear estructura y añadir funcionalidad al juego
 const App = () => {
 
@@ -31,6 +33,11 @@ const App = () => {
       const show = () => {
         minute.innerHTML = timeGame;
       };
+
+      if(timeGame==0){
+        alert('Time out');
+        clearInterval(timeGame==0);
+      }
 
       show();
     }, 1000);
@@ -142,6 +149,7 @@ const App = () => {
   modalInt.appendChild(restart);
   restart.id = "restart";
   restart.textContent = "Restart";
+  
 
 
 
@@ -218,7 +226,7 @@ const App = () => {
       });
     }
   };
-  gridBoard();
+  
 
   // tiempo en el que se dan vuelta si no hacen match
   function flipBack() {
@@ -259,14 +267,26 @@ const App = () => {
       // Reiniciar función para jugar desde 0
       else gridBoard();
       arrayOfClickCard.length = 0;
+      
+       // Función restart desde el modal
+       
     }
 
 
   }
-
+  gridBoard();
+  const restartF = () => {
+    restart.addEventListener("click", gridBoard);
+    restart.addEventListener("click", closeModal);
+    
+  };
+  restartF();
 
   return gameContainer;
+
+  
 };
+
 export default App;
 export { shuffle };
 export { App };

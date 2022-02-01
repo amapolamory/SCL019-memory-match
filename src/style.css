@@ -18,13 +18,15 @@ body {
 
 .container {
   display: flex;
+  z-index: 1;
   align-items: center;
   align-self: center;
   flex-direction: column;
   background-color: rgba(113, 201, 206);
   border-radius: 40px;
-  width: 650px;
-  height: 700px;
+  width: 50%;
+  height: 34rem;
+  margin: 0 auto;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2em;
@@ -52,7 +54,7 @@ body {
   position: absolute;
   left: 43%;
   top: 40%;
-  border: 8px solid #f3bc77;
+  border: 7px solid #f3bc77;
   border-radius: 20px;
 }
 
@@ -87,17 +89,6 @@ body {
   animation-direction: alternate;
 }
 
-@keyframes slidein {
-  from {
-    margin-left: 80%;
-    width: 130%;
-  }
-
-  to {
-    margin-left: 50%;
-    width: 80%;
-  }
-}
 
 /*Elementos externos del juego*/
 
@@ -138,8 +129,8 @@ body {
 }
 
 span {
-  width: 80px;
-  height: 80px;
+  width: 10%;
+  height: auto;
   align-self: auto;
   justify-self: auto;
 }
@@ -314,8 +305,8 @@ img:hover {
 
 .restart {
   background-color: #a55233 !important;
-  width: 100px;
-  height: 60px;
+  width: 20%;
+  height: auto;
   border-radius: 7px;
   border: 4px solid #f3bc77;
   text-align: center;
