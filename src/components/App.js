@@ -21,10 +21,7 @@ let matchedCard = []; //Guarda la cantidad de cartas que han hecho match
 // Función para crear estructura y añadir funcionalidad al juego
 const App = () => {
 
- 
-
-
-  const countDown = () => {
+   const countDown = () => {
     let time = 60;
 
     setInterval(() => {
@@ -35,12 +32,15 @@ const App = () => {
         minute.innerHTML = timeGame;
       };
 
-      if(timeGame==45){
-        clearInterval(timeGame==0);
-        modalCont2.style.display= 'block';
-
+      if(timeGame==55){
+          modalCont2.style.display= 'block';
+      }
+ 
+      const clear = () =>{
+        window.clearInterval(timeGame)
       }
 
+       clear();
       show();
     }, 1000);
   };
@@ -180,7 +180,7 @@ const App = () => {
   modalInt2.appendChild(restart2);
   restart2.id = "restart2";
   restart2.textContent = "Restart";
-
+  
   const close2 = document.createElement("span");
   close2.className = "close2";
   close2.id = "close2";
@@ -301,6 +301,7 @@ const App = () => {
           //  direccionar al modal
           const modal = () => {
             modalCont.style.display = "block";
+            clearInterval(titleGame);
                       };
           modal();
 
@@ -325,9 +326,13 @@ const App = () => {
     
   }
  gridBoard();
+ 
   const restartF = () => {
     restart.addEventListener("click",gridBoard);
     restart.addEventListener("click", closeModal);
+    
+
+    
     
   };
   restartF();
@@ -335,6 +340,7 @@ const App = () => {
   const restartF2 = () => {
     restart2.addEventListener("click",gridBoard);
     restart2.addEventListener("click", closeModal2);
+    
   };
   restartF2();
 
