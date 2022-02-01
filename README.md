@@ -38,7 +38,7 @@ Este juego de Memory Match con tematica perruna es ideal para pasar el rato y fo
  #### b) Prototipo de alta fidelidad
 <img src="src/readme/prototiposTodos.png" align="center" width="800" height="600" >
 
-#### Testeos de usabilidad
+#### c) Testeos de usabilidad
 
 
 
