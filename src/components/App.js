@@ -322,9 +322,9 @@ const App = () => {
        
     }
 
-
+    
   }
- 
+ gridBoard();
   const restartF = () => {
     restart.addEventListener("click",gridBoard);
     restart.addEventListener("click", closeModal);
