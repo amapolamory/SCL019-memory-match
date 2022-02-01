@@ -22,9 +22,8 @@ Este juego de Memory Match con tematica perruna es ideal para pasar el rato y fo
 <img src="src/readme/prototipo1.jpeg">
 
  ### Prototipo de alta fidelidad
-<img src="src/readme/inicio.png" width="618" heigth="362">
-<img src="src/readme/prototipo2.png">
-<img src="src/readme/modales.png">
+<img src="src/readme/prototiposTodos">
+
 
 
 
