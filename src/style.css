@@ -251,7 +251,7 @@ img:hover {
   transition: transform 0.3s;
 }
 
-.modalCont {
+.modalCont, .modalCont2 {
   position: fixed;
   padding-top: 100px;
   left: 0;
@@ -263,7 +263,7 @@ img:hover {
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
-.modalInt {
+.modalInt, .modalInt2 {
   background-color: rgba(113, 201, 206);
   margin: auto;
   border: 10px solid #e3fdfd;
@@ -271,7 +271,7 @@ img:hover {
   width: 50%;
   height: 80%;
 }
-.modalTitle {
+.modalTitle , .modalTitle2{
   text-align: center;
   color: #a55233;
   font-size: 50px;
@@ -280,7 +280,7 @@ img:hover {
   
 }
 
-.close {
+.close, .close2 {
   color: grey;
   font-size: 30px;
   margin-left: 550px;
@@ -288,13 +288,15 @@ img:hover {
   
 }
 .close:hover,
-.close:focus {
+.close:focus ,
+.close2:hover,
+.close2:focus{
   color: #000;
   text-decoration: none;
   cursor: pointer;
 }
 
-.dogWin {
+.dogWin, .dogLose{
   background-image: url("./img/dogWin.gif");
   background-repeat: no-repeat;
   width: 50%;
@@ -303,7 +305,8 @@ img:hover {
   z-index: 1;
 }
 
-.restart {
+.restart,
+.restart2 {
   background-color: #a55233 !important;
   width: 20%;
   height: auto;
@@ -320,7 +323,8 @@ img:hover {
   transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.restart:hover{
+.restart:hover,
+.restart2:hover{
   box-shadow: inset 0 0 20px #f0dab1;
   outline-color: #a55233;
   outline-offset: 40px;

@@ -21,6 +21,7 @@ let matchedCard = []; //Guarda la cantidad de cartas que han hecho match
 // Función para crear estructura y añadir funcionalidad al juego
 const App = () => {
 
+ 
 
 
   const countDown = () => {
@@ -34,9 +35,10 @@ const App = () => {
         minute.innerHTML = timeGame;
       };
 
-      if(timeGame==0){
-        alert('Time out');
+      if(timeGame==45){
         clearInterval(timeGame==0);
+        modalCont2.style.display= 'block';
+
       }
 
       show();
@@ -105,9 +107,7 @@ const App = () => {
 
   // Modal Ganador
 
-  // modalContainer = document.createElement('div');
-  // modalContainer.className= 'modalContainer';
-  // gameContainer.appendChild(modalContainer);
+
 
   const modalCont = document.createElement("div");
   modalCont.className = "modalCont";
@@ -125,8 +125,7 @@ const App = () => {
   close.className = "close";
   close.id = "close";
   close.textContent = "x";
-  modalHead.appendChild(close);
-
+  modalHead.appendChild(close)
   const closeModal = () => {
     document.getElementById(modalCont);
     modalCont.style.display = 'none';
@@ -149,6 +148,54 @@ const App = () => {
   modalInt.appendChild(restart);
   restart.id = "restart";
   restart.textContent = "Restart";
+
+  //Modal Perdedor
+
+  const modalCont2 = document.createElement('div');
+  modalCont2.className= 'modalCont2';
+  gameContainer.appendChild(modalCont2);
+ 
+
+  const modalInt2 = document.createElement('div');
+  modalInt2.className=  'modalInt2';
+  modalCont2.appendChild(modalInt2);
+
+  const modalHead2 = document.createElement("div");
+  modalHead2.className = "modalHead2";
+  modalInt2.appendChild(modalHead2);
+
+
+
+  const modalTitle2 = document.createElement("div");
+  modalTitle2.className = "modalTitle";
+  modalTitle2.textContent = "You Lose!";
+  modalHead2.appendChild(modalTitle2);
+
+  const dogLose = document.createElement("div");
+  dogLose.className = "dogLose";
+  modalInt2.appendChild(dogLose);
+
+  const restart2 = document.createElement("button");
+  restart2.className = "restart2";
+  modalInt2.appendChild(restart2);
+  restart2.id = "restart2";
+  restart2.textContent = "Restart";
+
+  const close2 = document.createElement("span");
+  close2.className = "close2";
+  close2.id = "close2";
+  close2.textContent = "x";
+  modalHead2.appendChild(close2);
+
+  const closeModal2 = () => {
+    document.getElementById(modalCont2);
+    modalCont2.style.display = 'none';
+  };
+  closeModal2();
+
+  close2.addEventListener("click", closeModal2);
+
+
   
 
 
@@ -196,7 +243,34 @@ const App = () => {
             flipBack(doubleCards, backFace[i]);
           }, 500);
 
+          // Función restart desde el modal
+          // const restartF = () => {
+          //   restart.addEventListener("click", gridBoard);
+          // };
+          // restartF();
+
+      
+
+          if(clickCard.length==2){
+            const movements = () => {
+
+              let movesCounter = 0;
+              movesCounter = movesCounter+1;
+              
+              const updateDisplay= () => {
+                countMoves.innerHTML = movesCounter;
+              };
         
+             
+              updateDisplay();
+            console.log(movesCounter);
+            return movesCounter++;
+            
+    
+          };
+          movements();
+
+          }
         }
       });
     }
@@ -214,23 +288,7 @@ const App = () => {
   function matchComplete(arrayOfClickCard) {
     //si las cartas presionadas son exactamente 2 que nos de true y se añadan al array
     if (arrayOfClickCard.length == 2) {
-      const movements = () => {
-
-          let movesCounter = 0;
-          function incrementMoves() {
-            updateDisplay(++movesCounter);
-          };
-
-          incrementMoves();
-          function updateDisplay(val) {
-        
-            countMoves.innerHTML = val;
-          };
-        console.log(movesCounter);
-        
-       
-      };
-      movements();
+     
       //Si la primera carta es igual a la segunda
       if (arrayOfClickCard[0].id == arrayOfClickCard[1].id) {
         arrayOfClickCard[0].matched = true;
@@ -245,8 +303,8 @@ const App = () => {
             modalCont.style.display = "block";
                       };
           modal();
-          
-          for (let i = 0; i <= 11; i++) {
+
+          for (let i = 0; i < 12; i++) {
             // Impide hacer match sobre match y activa shuffle
             doubleCards[i].matched = false;
 
@@ -268,12 +326,20 @@ const App = () => {
   }
  
   const restartF = () => {
-    restart.addEventListener("click", gridBoard);
+    restart.addEventListener("click",gridBoard);
     restart.addEventListener("click", closeModal);
     
   };
   restartF();
-  
+
+  const restartF2 = () => {
+    restart2.addEventListener("click",gridBoard);
+    restart2.addEventListener("click", closeModal2);
+  };
+  restartF2();
+
+
+
   return gameContainer;
 
   
