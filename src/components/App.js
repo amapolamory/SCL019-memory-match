@@ -193,6 +193,27 @@ const App = () => {
             restart.addEventListener("click", gridBoard);
           };
           restartF();
+
+          if(clickCard.length==2){
+            const movements = () => {
+
+              let movesCounter = 0;
+              movesCounter = movesCounter+1;
+              
+              const updateDisplay= () => {
+                countMoves.innerHTML = movesCounter;
+              };
+        
+             
+              updateDisplay();
+            console.log(movesCounter);
+            return movesCounter++;
+            
+    
+          };
+          movements();
+
+          }
         }
       });
     }
@@ -210,23 +231,7 @@ const App = () => {
   function matchComplete(arrayOfClickCard) {
     //si las cartas presionadas son exactamente 2 que nos de true y se añadan al array
     if (arrayOfClickCard.length == 2) {
-      const movements = () => {
-
-          let movesCounter = 0;
-          function incrementMoves() {
-            updateDisplay(++movesCounter);
-          };
-
-          incrementMoves();
-          function updateDisplay(val) {
-        
-            countMoves.innerHTML = val;
-          };
-        console.log(movesCounter);
-        
-
-      };
-      movements();
+     
       //Si la primera carta es igual a la segunda
       if (arrayOfClickCard[0].id == arrayOfClickCard[1].id) {
         arrayOfClickCard[0].matched = true;
