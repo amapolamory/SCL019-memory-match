@@ -14,15 +14,29 @@
 
 ***
 
-## 1. Preámbulo
+
+
+### 1. Definición del producto
+
+Documenta brevemente tu trabajo en el archivo `README.md` de tu repositorio,
+contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve
+el problema (o problemas) que tiene tu usuario.
+
+
+
+### 2. Historias de usuario
+<img src="src/readme/historiasdeusuario.jpeg" align="center" width="800" height="600" >
+
+
+## 3. ### Diseño de la Interfaz de Usuario
 
 Este juego de Memory Match con tematica perruna es ideal para pasar el rato y fortalecer tu memoria.
  
  ### Prototipo de baja fidelidad
-<img src="src/readme/prototipo1.jpeg" width="800" height="600" align="center">
+<img src="src/readme/prototipo1.jpeg" align="center" width="800" height="600" >
 
  ### Prototipo de alta fidelidad
-<img src="src/readme/prototiposTodos.png" width="800" height="600" align="center">
+<img src="src/readme/prototiposTodos.png" align="center" width="800" height="600" >
 
 
 
@@ -34,16 +48,6 @@ Esta aplicación web está diseñada para jugadores de cualquier edad y consiste
 
 
 
- 
-
-  
-
-  
-
-
-
- 
-  
 
 
 
@@ -55,13 +59,6 @@ Esta aplicación web está diseñada para jugadores de cualquier edad y consiste
 
 Los criterios para considerar que has completado este proyecto son:
 
-### Definición del producto
-
-Documenta brevemente tu trabajo en el archivo `README.md` de tu repositorio,
-contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve
-el problema (o problemas) que tiene tu usuario.
-
-### Historias de usuario
 
 Una vez que entiendas las necesidades de tus usuarios, escribe las [Historias
 de Usuario](https://es.wikipedia.org/wiki/Historias_de_usuario) que representen
@@ -74,7 +71,7 @@ Criterios de Aceptación para cada una.
 En la medida de lo posible, termina una historia de usuario antes de pasar
 a la siguiente (Cumple con Definición de Terminado + Criterios de Aceptación).
 
-### Diseño de la Interfaz de Usuario
+
 
 #### Prototipo de baja fidelidad
 
