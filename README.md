@@ -25,7 +25,7 @@ el problema (o problemas) que tiene tu usuario.
 
 
 ### 2. Historias de usuario
-<img src="src/readme/historiasdeusuario.png" align="center" width="800" height="450" >
+<img src="src/readme/historiasdeusuario.png" align="center" width="800" height="400" >
 
 
 ## 3. ### Diseño de la Interfaz de Usuario
