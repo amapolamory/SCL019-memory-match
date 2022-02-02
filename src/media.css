@@ -12,11 +12,6 @@
         grid-gap: 10%;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        width: 94%;
-        flex-direction: row;
-        padding: 4% 40% 17% 40%;
-        position: relative;
-        top: 10%;
-        left: 1%;
+        
     }
 }

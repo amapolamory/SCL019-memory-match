@@ -183,12 +183,9 @@ const App = () => {
     for (let i = 0; i < doubleCards.length; i++) {
       // INSERTA IMAGENES EN FRONTFACE Y BACKFACE
       let boardCard = document.createElement("div");
-      boardCard.classList = "boardCard";
+      boardCard.className = "boardCard";
       cardsGrid.appendChild(boardCard);
-      boardCard.addEventListener('click', (e) => {
-        boardCard.classList.toggle('toggleCard');
-      });
-
+      
       let backFace = document.createElement("img");
       boardCard.appendChild(backFace);
       backFace.setAttribute("src", "./img/reverso_carta.png");
@@ -212,7 +209,8 @@ const App = () => {
           setTimeout(() => {
             //Define el tiempo del giro de carta
             flipBack(doubleCards, backFace[i]);
-          }, 600);
+          }, 500);
+          
 
         }
       });
@@ -228,7 +226,7 @@ const App = () => {
   function flipBack() {
     setTimeout(function () {
       matchComplete(clickCard);
-    }, 1400);
+    }, 1200);
   }
 
   //Función para todos los match (ganar el juego)
@@ -241,6 +239,7 @@ const App = () => {
         arrayOfClickCard[1].matched = true;
         console.log(JSON.stringify(arrayOfClickCard));
         matchedCard++;
+        
         // si se completaron los 6 match que se abra el modal
         if (matchedCard === 6) {
           //  direccionar al modal
