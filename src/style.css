@@ -119,7 +119,7 @@ body {
   flex-direction: row;
   position: absolute;
   margin-left: 30%;
-  margin-bottom: 40%;
+  margin-bottom: 38%;
 }
 
 .timer {
@@ -238,7 +238,7 @@ span {
 }
 
 img {
-  border-radius: 10px;
+  border-radius: 7%;
   border: 6px solid #a55233;
   position: absolute;
   width: 16vh;
@@ -246,11 +246,15 @@ img {
   top: 0.5;
   transform: scale(1);
   box-shadow: black 0.5em 0.5em 0.2em;
+ 
 }
 img:hover {
   transform: scale(0.95);
   transition: transform 0.3s;
+ 
 }
+
+
 
 .modalCont, .modalCont2 {
   position: fixed;
@@ -285,7 +289,7 @@ img:hover {
   color: grey;
   font-size: 30px;
   margin-left: 550px;
-  margin-bottom: 500px;
+  margin-bottom: 700px;
   
 }
 .close:hover,

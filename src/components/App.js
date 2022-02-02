@@ -19,18 +19,19 @@ let matchedCard = []; //Guarda la cantidad de cartas que han hecho match
 
 // Función para crear estructura y añadir funcionalidad al juego
 const App = () => {
+
+  //Funcion de timer
   const countDown = () => {
     let time = 60;
 
-    setInterval(() => {
+    setInterval(() => {                  // hace que el tiempo impreso en time disminuya en segundos
       let timeGame = time--;
-      console.log(timeGame);
 
-      const show = () => {
+      const show = () => {          //show hace que se imprima en el span de minute como pasan los segundos
         minute.innerHTML = timeGame;
       };
 
-      if (timeGame == 30) {
+      if (timeGame == 30) {                   //Si el span llega a 0 aparece el modal
         modalCont2.style.display = "block";
       }
 
@@ -53,7 +54,7 @@ const App = () => {
   timeMove.className = "timeMove";
   gameContainer.appendChild(timeMove);
 
-  const chronos = document.createElement("div");
+  const chronos = document.createElement("div");// Div del botón que inicia el tiempo
   chronos.className = "chronos";
   chronos.id = "chronos";
   gameContainer.appendChild(chronos);
@@ -65,7 +66,7 @@ const App = () => {
   timer.textContent = "Timer: ";
   timeMove.appendChild(timer);
 
-  const minute = document.createElement("span");
+  const minute = document.createElement("span"); // Span donde se mostrara como disminuye el tiempo
   minute.id = "minute";
   timer.appendChild(minute);
 
@@ -100,13 +101,16 @@ const App = () => {
   close.id = "close";
   close.textContent = "x";
   modalHead.appendChild(close);
-  const closeModal = () => {
+
+  const closeModal = () => {     //Funcion que cierra el modal
     document.getElementById(modalCont);
     modalCont.style.display = "none";
   };
   closeModal();
 
+  // Es la x del modal que se hace click y se cierra sin reiniciar la pagina
   close.addEventListener("click", closeModal);
+
 
   const modalTitle = document.createElement("div");
   modalTitle.className = "modalTitle";
@@ -158,7 +162,7 @@ const App = () => {
   close2.textContent = "x";
   modalHead2.appendChild(close2);
 
-  const closeModal2 = () => {
+  const closeModal2 = () => {              //Funcion que cierra el modal con la x
     document.getElementById(modalCont2);
     modalCont2.style.display = "none";
   };
@@ -181,15 +185,13 @@ const App = () => {
       let boardCard = document.createElement("div");
       boardCard.className = "boardCard";
       cardsGrid.appendChild(boardCard);
-
+      
       let backFace = document.createElement("img");
       boardCard.appendChild(backFace);
       backFace.setAttribute("src", "./img/reverso_carta.png");
 
       let frontFace = document.createElement("div");
-
-      //segun lo que entiendo si hace un match se remplaza la imagen del backface permanentemente para que no se de vuelta
-      //por la que hizo match de frontface
+      // Le cambia el atributo a backface cuando hace match y con la propiedad .matched las deja dadas vueltas si se encontro con su par
       if (doubleCards[i].matched) {
         backFace.setAttribute("src", doubleCards[i].image);
       }
@@ -208,14 +210,17 @@ const App = () => {
             //Define el tiempo del giro de carta
             flipBack(doubleCards, backFace[i]);
           }, 500);
+          
 
-
-          if (clickCard.length == 2) {
-          }
         }
       });
     }
+  
+
+   
   };
+
+
 
   // tiempo en el que se dan vuelta si no hacen match
   function flipBack() {
@@ -234,6 +239,7 @@ const App = () => {
         arrayOfClickCard[1].matched = true;
         console.log(JSON.stringify(arrayOfClickCard));
         matchedCard++;
+        
         // si se completaron los 6 match que se abra el modal
         if (matchedCard === 6) {
           //  direccionar al modal
