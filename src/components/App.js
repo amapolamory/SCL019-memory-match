@@ -21,7 +21,7 @@ let matchedCard = []; //Guarda la cantidad de cartas que han hecho match
 // Función para crear estructura y añadir funcionalidad al juego
 const App = () => {
 
- 
+
 
 
   const countDown = () => {
@@ -35,18 +35,19 @@ const App = () => {
         minute.innerHTML = timeGame;
       };
 
-      if(timeGame==45){
-        clearInterval(timeGame==0);
-        modalCont2.style.display= 'block';
+      if (timeGame == 55) {
+
+        modalCont2.style.display = 'block';
+        clearInterval(timeGame);
 
       }
 
       show();
     }, 1000);
   };
-  
 
-  
+
+
 
   // contenedor padre del juego
   const gameContainer = document.createElement("div");
@@ -107,8 +108,6 @@ const App = () => {
 
   // Modal Ganador
 
-
-
   const modalCont = document.createElement("div");
   modalCont.className = "modalCont";
   gameContainer.appendChild(modalCont);
@@ -152,19 +151,17 @@ const App = () => {
   //Modal Perdedor
 
   const modalCont2 = document.createElement('div');
-  modalCont2.className= 'modalCont2';
+  modalCont2.className = 'modalCont2';
   gameContainer.appendChild(modalCont2);
- 
+
 
   const modalInt2 = document.createElement('div');
-  modalInt2.className=  'modalInt2';
+  modalInt2.className = 'modalInt2';
   modalCont2.appendChild(modalInt2);
 
   const modalHead2 = document.createElement("div");
   modalHead2.className = "modalHead2";
   modalInt2.appendChild(modalHead2);
-
-
 
   const modalTitle2 = document.createElement("div");
   modalTitle2.className = "modalTitle";
@@ -194,10 +191,6 @@ const App = () => {
   closeModal2();
 
   close2.addEventListener("click", closeModal2);
-
-
-  
-
 
 
   // CONTENEDOR DEL GRID DE CARTAS
@@ -243,39 +236,28 @@ const App = () => {
             flipBack(doubleCards, backFace[i]);
           }, 500);
 
-          // Función restart desde el modal
-          // const restartF = () => {
-          //   restart.addEventListener("click", gridBoard);
-          // };
-          // restartF();
 
-      
+          if (clickCard.length == 2) {
+            //   const movements = () => {
 
-          if(clickCard.length==2){
-            const movements = () => {
+            let movesCounter = 0;
+            movesCounter = movesCounter + 1;
 
-              let movesCounter = 0;
-              movesCounter = movesCounter+1;
-              
-              const updateDisplay= () => {
-                countMoves.innerHTML = movesCounter;
-              };
-        
-             
-              updateDisplay();
+            //     const updateDisplay= () => {
+            //       countMoves.innerHTML = movesCounter;
+            //     };
+            //     updateDisplay();
             console.log(movesCounter);
-            return movesCounter++;
-            
-    
-          };
-          movements();
+            //   return movesCounter++;
+            // };
+            // movements();
 
           }
         }
       });
     }
   };
-  
+
 
   // tiempo en el que se dan vuelta si no hacen match
   function flipBack() {
@@ -288,7 +270,7 @@ const App = () => {
   function matchComplete(arrayOfClickCard) {
     //si las cartas presionadas son exactamente 2 que nos de true y se añadan al array
     if (arrayOfClickCard.length == 2) {
-     
+
       //Si la primera carta es igual a la segunda
       if (arrayOfClickCard[0].id == arrayOfClickCard[1].id) {
         arrayOfClickCard[0].matched = true;
@@ -316,23 +298,25 @@ const App = () => {
       // Reiniciar función para jugar desde 0
       else gridBoard();
       arrayOfClickCard.length = 0;
-      
-       // Función restart desde el modal
-       
+
+      // Función restart desde el modal
+
     }
+    
 
 
   }
   gridBoard();
   const restartF = () => {
-    restart.addEventListener("click",gridBoard);
+    restart.addEventListener("click", gridBoard);
     restart.addEventListener("click", closeModal);
-    
+
+
   };
   restartF();
 
   const restartF2 = () => {
-    restart2.addEventListener("click",gridBoard);
+    restart2.addEventListener("click", gridBoard);
     restart2.addEventListener("click", closeModal2);
   };
   restartF2();
@@ -341,7 +325,7 @@ const App = () => {
 
   return gameContainer;
 
-  
+
 };
 
 export default App;
