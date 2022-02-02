@@ -1,5 +1,5 @@
 import puppies from "../data/puppies/puppies.js";
-
+import initGame from "./initGame.js";
 
 const cards = puppies.items;
 const doubleCards = cards.concat(cards); // almacenamos las cartas duplicadas (cards+cards)
@@ -17,11 +17,9 @@ shuffle();
 let clickCard = [];
 let matchedCard = []; //Guarda la cantidad de cartas que han hecho match
 
-
 // Función para crear estructura y añadir funcionalidad al juego
 const App = () => {
-
-   const countDown = () => {
+  const countDown = () => {
     let time = 60;
 
     setInterval(() => {
@@ -32,21 +30,14 @@ const App = () => {
         minute.innerHTML = timeGame;
       };
 
-      if(timeGame==55){
-          modalCont2.style.display= 'block';
-      }
- 
-      const clear = () =>{
-        window.clearInterval(timeGame)
+      if (timeGame == 30) {
+        modalCont2.style.display = "block";
+        
       }
 
-       clear();
       show();
     }, 1000);
   };
-  
-
-  
 
   // contenedor padre del juego
   const gameContainer = document.createElement("div");
@@ -69,7 +60,6 @@ const App = () => {
   gameContainer.appendChild(chronos);
   chronos.addEventListener("click", countDown);
 
-
   const timer = document.createElement("div");
   timer.className = "timer";
   timer.id = "timer";
@@ -79,19 +69,6 @@ const App = () => {
   const minute = document.createElement("span");
   minute.id = "minute";
   timer.appendChild(minute);
-
-  const moves = document.createElement("div");
-  moves.className = "moves";
-  moves.textContent = "Moves:";
-  timeMove.appendChild(moves);
-
-  const countMoves = document.createElement("span");
-  countMoves.id = "countMoves";
-  countMoves.textContent = " 0";
-  moves.appendChild(countMoves);
-
-
-
 
   const instruction = document.createElement("div");
   instruction.className = "instruction";
@@ -106,8 +83,6 @@ const App = () => {
   gameContainer.appendChild(dogRight);
 
   // Modal Ganador
-
-
 
   const modalCont = document.createElement("div");
   modalCont.className = "modalCont";
@@ -125,10 +100,10 @@ const App = () => {
   close.className = "close";
   close.id = "close";
   close.textContent = "x";
-  modalHead.appendChild(close)
+  modalHead.appendChild(close);
   const closeModal = () => {
     document.getElementById(modalCont);
-    modalCont.style.display = 'none';
+    modalCont.style.display = "none";
   };
   closeModal();
 
@@ -151,20 +126,17 @@ const App = () => {
 
   //Modal Perdedor
 
-  const modalCont2 = document.createElement('div');
-  modalCont2.className= 'modalCont2';
+  const modalCont2 = document.createElement("div");
+  modalCont2.className = "modalCont2";
   gameContainer.appendChild(modalCont2);
- 
 
-  const modalInt2 = document.createElement('div');
-  modalInt2.className=  'modalInt2';
+  const modalInt2 = document.createElement("div");
+  modalInt2.className = "modalInt2";
   modalCont2.appendChild(modalInt2);
 
   const modalHead2 = document.createElement("div");
   modalHead2.className = "modalHead2";
   modalInt2.appendChild(modalHead2);
-
-
 
   const modalTitle2 = document.createElement("div");
   modalTitle2.className = "modalTitle";
@@ -180,7 +152,7 @@ const App = () => {
   modalInt2.appendChild(restart2);
   restart2.id = "restart2";
   restart2.textContent = "Restart";
-  
+
   const close2 = document.createElement("span");
   close2.className = "close2";
   close2.id = "close2";
@@ -189,16 +161,11 @@ const App = () => {
 
   const closeModal2 = () => {
     document.getElementById(modalCont2);
-    modalCont2.style.display = 'none';
+    modalCont2.style.display = "none";
   };
   closeModal2();
 
   close2.addEventListener("click", closeModal2);
-
-
-  
-
-
 
   // CONTENEDOR DEL GRID DE CARTAS
   const cardsGrid = document.createElement("div");
@@ -249,33 +216,12 @@ const App = () => {
           // };
           // restartF();
 
-      
-
-          if(clickCard.length==2){
-            const movements = () => {
-
-              let movesCounter = 0;
-              movesCounter = movesCounter+1;
-              
-              const updateDisplay= () => {
-                countMoves.innerHTML = movesCounter;
-              };
-        
-             
-              updateDisplay();
-            console.log(movesCounter);
-            return movesCounter++;
-            
-    
-          };
-          movements();
-
+          if (clickCard.length == 2) {
           }
         }
       });
     }
   };
-  
 
   // tiempo en el que se dan vuelta si no hacen match
   function flipBack() {
@@ -288,7 +234,6 @@ const App = () => {
   function matchComplete(arrayOfClickCard) {
     //si las cartas presionadas son exactamente 2 que nos de true y se añadan al array
     if (arrayOfClickCard.length == 2) {
-     
       //Si la primera carta es igual a la segunda
       if (arrayOfClickCard[0].id == arrayOfClickCard[1].id) {
         arrayOfClickCard[0].matched = true;
@@ -297,12 +242,11 @@ const App = () => {
         matchedCard++;
         // si se completaron los 6 match que se abra el modal
         if (matchedCard === 6) {
-          
           //  direccionar al modal
           const modal = () => {
             modalCont.style.display = "block";
             clearInterval(titleGame);
-                      };
+          };
           modal();
 
           for (let i = 0; i < 12; i++) {
@@ -318,37 +262,30 @@ const App = () => {
       // Reiniciar función para jugar desde 0
       else gridBoard();
       arrayOfClickCard.length = 0;
-      
-       // Función restart desde el modal
-       
+
+      // Función restart desde el modal
     }
-
-    
   }
- gridBoard();
- 
-  const restartF = () => {
-    restart.addEventListener("click",gridBoard);
-    restart.addEventListener("click", closeModal);
-    
+  gridBoard();
 
-    
+  const refresh = () => {
+    window. location. reload() 
+  }
+
+  const restartF = () => {
+    restart.addEventListener("click", refresh);
+    restart.addEventListener("click", closeModal);
     
   };
   restartF();
 
   const restartF2 = () => {
-    restart2.addEventListener("click",gridBoard);
+    restart2.addEventListener("click", refresh);
     restart2.addEventListener("click", closeModal2);
-    
   };
   restartF2();
 
-
-
   return gameContainer;
-
-  
 };
 
 export default App;
