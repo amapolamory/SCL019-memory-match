@@ -209,11 +209,6 @@ const App = () => {
             flipBack(doubleCards, backFace[i]);
           }, 500);
 
-          // Función restart desde el modal
-          // const restartF = () => {
-          //   restart.addEventListener("click", gridBoard);
-          // };
-          // restartF();
 
           if (clickCard.length == 2) {
           }
