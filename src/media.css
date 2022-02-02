@@ -1,0 +1,22 @@
+@media  (max-width: 1.080px) and (max-height:2.280px){
+    body{
+        height: 100vh;
+        overflow: hidden;
+
+    }
+
+    .cardsGrid{
+        display: grid;
+        grid-template-columns: repeat(3, 55%);
+        grid-template-rows: repeat(4, 7rem);
+        grid-gap: 10%;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 94%;
+        flex-direction: row;
+        padding: 4% 40% 17% 40%;
+        position: relative;
+        top: 10%;
+        left: 1%;
+    }
+}

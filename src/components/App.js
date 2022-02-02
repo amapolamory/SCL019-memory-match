@@ -183,8 +183,11 @@ const App = () => {
     for (let i = 0; i < doubleCards.length; i++) {
       // INSERTA IMAGENES EN FRONTFACE Y BACKFACE
       let boardCard = document.createElement("div");
-      boardCard.className = "boardCard";
+      boardCard.classList = "boardCard";
       cardsGrid.appendChild(boardCard);
+      boardCard.addEventListener('click', (e) => {
+        boardCard.classList.toggle('toggleCard');
+      });
 
       let backFace = document.createElement("img");
       boardCard.appendChild(backFace);
@@ -209,18 +212,23 @@ const App = () => {
           setTimeout(() => {
             //Define el tiempo del giro de carta
             flipBack(doubleCards, backFace[i]);
-          }, 500);
+          }, 600);
 
         }
       });
     }
+  
+
+   
   };
+
+
 
   // tiempo en el que se dan vuelta si no hacen match
   function flipBack() {
     setTimeout(function () {
       matchComplete(clickCard);
-    }, 1200);
+    }, 1400);
   }
 
   //Función para todos los match (ganar el juego)
