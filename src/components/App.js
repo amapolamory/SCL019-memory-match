@@ -33,7 +33,6 @@ const App = () => {
 
       if (timeGame == 30) {                   //Si el span llega a 0 aparece el modal
         modalCont2.style.display = "block";
-
       }
 
       show();
@@ -263,14 +262,12 @@ const App = () => {
   gridBoard();
 
   const refresh = () => {
-    window.location.reload()
-  }
+    window.location.reload();
+  };
 
-  const restartF = () => {
+    const restartF = () => {
     restart.addEventListener("click", refresh);
     restart.addEventListener("click", closeModal);
-
-
   };
   restartF();
 
