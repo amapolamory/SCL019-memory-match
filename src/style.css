@@ -119,7 +119,7 @@ body {
   flex-direction: row;
   position: absolute;
   margin-left: 30%;
-  margin-bottom: 40%;
+  margin-bottom: 38%;
 }
 
 .timer {
@@ -250,6 +250,11 @@ img {
 img:hover {
   transform: scale(0.95);
   transition: transform 0.3s;
+ 
+}
+
+.frontFace{
+  transform: rotateY(180deg);
 }
 
 .modalCont, .modalCont2 {
@@ -285,7 +290,7 @@ img:hover {
   color: grey;
   font-size: 30px;
   margin-left: 550px;
-  margin-bottom: 500px;
+  margin-bottom: 700px;
   
 }
 .close:hover,
