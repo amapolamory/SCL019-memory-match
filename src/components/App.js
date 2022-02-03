@@ -11,6 +11,7 @@ const shuffle = () => {
   return cardData;
 };
 
+
 shuffle();
 
 // Declaramos dos arrays: 1)Cartas clickeadas 2)Match
