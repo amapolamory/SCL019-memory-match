@@ -61,6 +61,7 @@ body {
 .start {
   background-image: url(img/Start.png);
   padding: 4%;
+  width: 10%;
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
@@ -156,17 +157,10 @@ span {
 }
 
 .chronos:hover {
-  border: 5px solid #a55233;
   background-image: url("img/startTime.png");
   background-repeat: no-repeat;
-  background-size: 80%;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  width: 14%;
-  height: 18%;
-  margin-left: 74%;
+  background-size: 50%;
+  
 }
 
 .dogRigth {

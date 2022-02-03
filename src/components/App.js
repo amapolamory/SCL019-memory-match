@@ -23,7 +23,7 @@ const App = () => {
 
   //Funcion de timer
   const countDown = () => {
-    let time = 60;
+    let time = 45;
 
     setInterval(() => {                  // hace que el tiempo impreso en time disminuya en segundos
       let timeGame = time--;
@@ -35,10 +35,14 @@ const App = () => {
       if (timeGame == 0) {                   //Si el span llega a 0 aparece el modal
         modalCont2.style.display = "block";
       }
+<<<<<<< HEAD
+      
+=======
       if(timeGame>0){
         modalCont2.style.display="none";
       }
 
+>>>>>>> 69022181e8aa97ab1f718c7ee449bc982dfce230
       show();
     }, 1000);
   };
@@ -250,10 +254,9 @@ const App = () => {
           //  direccionar al modal
           const modal = () => {
             modalCont.style.display = "block";
-
           };
           modal();
-
+          
           for (let i = 0; i < 12; i++) {
             // Impide hacer match sobre match y activa shuffle
             doubleCards[i].matched = false;
