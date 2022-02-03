@@ -31,8 +31,11 @@ const App = () => {
         minute.innerHTML = timeGame;
       };
 
-      if (timeGame == 25) {                   //Si el span llega a 0 aparece el modal
+      if (timeGame == 0) {                   //Si el span llega a 0 aparece el modal
         modalCont2.style.display = "block";
+      }
+      if(timeGame>0){
+        modalCont2.style.display="none";
       }
 
       show();
@@ -169,6 +172,7 @@ const App = () => {
   closeModal2();
 
   close2.addEventListener("click", closeModal2);
+
 
   // CONTENEDOR DEL GRID DE CARTAS
   const cardsGrid = document.createElement("div");
