@@ -1,7 +1,7 @@
 import puppies from "../data/puppies/puppies.js";
 import initGame from "./initGame.js";
 
-const cards = puppies.items;p
+const cards = puppies.items;
 const doubleCards = cards.concat(cards); // almacenamos las cartas duplicadas (cards+cards)
 
 // aleotizar cartas
