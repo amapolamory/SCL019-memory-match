@@ -34,14 +34,7 @@ const App = () => {
       if (timeGame == 0) {                   //Si el span llega a 0 aparece el modal
         modalCont2.style.display = "block";
       }
-<<<<<<< HEAD
       
-=======
-      if(timeGame>0){
-        modalCont2.style.display="none";
-      }
-
->>>>>>> 69022181e8aa97ab1f718c7ee449bc982dfce230
       show();
     }, 1000);
   };
