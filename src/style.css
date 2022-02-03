@@ -309,6 +309,9 @@ img:hover {
   margin-left: 33%;
   z-index: 1;
 }
+.dogLose{
+  background-image: url("./img/Loser.png");
+}
 
 .restart,
 .restart2 {
