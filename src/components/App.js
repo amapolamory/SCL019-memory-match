@@ -31,7 +31,7 @@ const App = () => {
         minute.innerHTML = timeGame;
       };
 
-      if (timeGame == 55) {                   //Si el span llega a 0 aparece el modal
+      if (timeGame == 25) {                   //Si el span llega a 0 aparece el modal
         modalCont2.style.display = "block";
       }
 
@@ -245,7 +245,7 @@ const App = () => {
           //  direccionar al modal
           const modal = () => {
             modalCont.style.display = "block";
-            clearInterval(titleGame);
+
           };
           modal();
 
