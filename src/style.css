@@ -136,12 +136,7 @@ span {
   align-self: auto;
   justify-self: auto;
 }
-.moves {
-  color: #f3bc77;
-  font-size: 2vw;
-  position: relative;
-  margin: 60px;
-}
+
 
 .chronos {
   border-radius: 10px;
