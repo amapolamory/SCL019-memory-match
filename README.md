@@ -12,9 +12,9 @@
 
 
 
-### 1. Definición del producto
+## 1. Definición del producto
 
-Memory Match con tematica perruna para fortalecer la memoria y pasar el rato.
+Memory Match con temática perruna para fortalecer la memoria y pasar el rato.
 
 
 ## 2. Resumen del proyecto
