@@ -250,8 +250,8 @@ const App = () => {
             modalCont.style.display = "block";
           };
           modal();
-
-                 
+    
+          
           
           for (let i = 0; i < 12; i++) {
             // Impide hacer match sobre match y activa shuffle

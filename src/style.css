@@ -245,7 +245,7 @@ img:hover {
 
 
 
-.modalCont, .modalCont2 {
+.modalCont {
   position: fixed;
   padding-top: 100px;
   left: 0;
@@ -255,8 +255,21 @@ img:hover {
   overflow: auto;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
-  z-index: 1;
+  z-index: 2;
 }
+  .modalCont2{
+    position: fixed;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
 .modalInt, .modalInt2 {
   background-color: rgba(113, 201, 206);
   margin: auto;
