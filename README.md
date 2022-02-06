@@ -46,7 +46,7 @@ Estos test se hicieron en 4 usuarios:
 -Test 3: Mujer de 24 años 30 enero 2022.
 -Test 4: Hombre de 22 años 06 de febrero 2022.
 
-<img src="src/readme/test de ususario.png" align="center" width="800" height="600" >
+<img src="src/readme/testdeusuario.png" align="center" width="800" height="600" >
 
 
 
