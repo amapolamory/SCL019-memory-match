@@ -32,7 +32,8 @@ const App = () => {
         minute.innerHTML = timeGame;
       };
 
-      if (timeGame == 0) {                   //Si el span llega a 0 aparece el modal
+      if (timeGame == 0) {  
+        clearInterval(timeGame==0);                 //Si el span llega a 0 aparece el modal
         modalCont2.style.display = "block";
       }
       
@@ -249,6 +250,8 @@ const App = () => {
             modalCont.style.display = "block";
           };
           modal();
+
+                 
           
           for (let i = 0; i < 12; i++) {
             // Impide hacer match sobre match y activa shuffle
