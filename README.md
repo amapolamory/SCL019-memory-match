@@ -12,25 +12,29 @@
 
 
 
-### 1. Definición del producto
+## 1. Definición del producto
 
-Documenta brevemente tu trabajo en el archivo `README.md` de tu repositorio,
-contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve
-el problema (o problemas) que tiene tu usuario.
+Memory Match con temática perruna para fortalecer la memoria y pasar el rato.
 
 
+## 2. Resumen del proyecto
+
+* Esta aplicación web está diseñada para jugadores de cualquier edad y consiste en un Memory Match de 12 cartas. El usuario tiene la opción de jugar a contratiempo o no, si decide jugar a contratiempo, lo puede hacer haciendo click al botón de cronometro, el cual también indica cuantos segundos tiene para jugar, y puede ver el display del tiempo disminuyendo en el span 'time'. 
+* Si el usuario esta jugando a contratiempo y hace todos los match antes de que el tiempo acabe, aparecerá un modal en la página indicandole que ganó, este modal tiene la opcion de cerrar solo el modal o de reiniciar el juego.
+* Si el usuario no termina antes que el tiempo acabe, aparecera un modal al llegar el tiempo a cero que le indica que perdió y tendrá la opción de cerrar el modal o reiniciar el juego.
+* Si el usuario juega sin límite de tiempo, al finalizar la partida aparecerá un modal indicándole que ganó.
 
 
 
-### 2. Historias de usuario
+
+
+###  Historias de usuario y Criterios de aceptación
+
+Gracias a un form de google, pudimos ver qué es lo que esperaba el usuario de la página. 
 <img src="src/readme/historiasdeusuario.png" align="center" width="800" height="400" >
 
 
-
-
 ### 3. Diseño de la Interfaz de Usuario
-
-Este juego de Memory Match con tematica perruna es ideal para pasar el rato y fortalecer tu memoria.
  
  #### a) Prototipo de baja fidelidad
 <img src="src/readme/prototipo1.jpeg" align="center" width="800" height="600" >
@@ -41,25 +45,22 @@ Este juego de Memory Match con tematica perruna es ideal para pasar el rato y fo
 #### c) Testeos de usabilidad
 
 Estos test se hicieron en 4 usuarios:
--Test 1: Niño de 9 años 19 de enero 2022.
--Test 2: Niño de 6 años 06 de febrero 2022.
--Test 3: Mujer de 24 años 30 enero 2022.
--Test 4: Hombre de 22 años 06 de febrero 2022.
+*Test 1: Niño de 9 años 19 de enero 2022.
+*Test 2: Niño de 6 años 06 de febrero 2022.
+*Test 3: Mujer de 24 años 30 enero 2022.
+*Test 4: Hombre de 22 años 06 de febrero 2022.
 
-<img src="src/readme/testdeusuario.png" align="center" width="800" height="600" >
+<img src="src/readme/testdeusuario.png" align="center" width="700" height="600" >
 
-
-
-
+*A medida que avanzabamos, pudimos ver cual era la cantidad de tiempo que se acomodaba más al usuario y vimos que la mayoría tomaba alrededor de 1 minuto en completar el memory match, lo que nos  hizo fijar el tiempo del cronometro en 45 segundos y que así los usuarios sintieran que se enfrentaban a un reto.
 
 
 
 
 
 
-## 2. Resumen del proyecto
 
-Esta aplicación web está diseñada para jugadores de cualquier edad y consiste en un Memory Match de 12 cartas. El usuario puede escoger si jugará a contratiempo o no.
+
 
 
 
@@ -71,50 +72,9 @@ Esta aplicación web está diseñada para jugadores de cualquier edad y consiste
 
  
 
-## 5. Criterios de aceptación mínimos del proyecto
-
-Los criterios para considerar que has completado este proyecto son:
-
-
-Una vez que entiendas las necesidades de tus usuarios, escribe las [Historias
-de Usuario](https://es.wikipedia.org/wiki/Historias_de_usuario) que representen
-todo lo que el usuario necesita hacer/ver. Las **Historias de Usuario** deben
-ser el resultado de tu proceso de investigación o _research_ de tus usuarios.
-
-Asegúrate de incluir la definición de terminado (_definition of done_) y los
-Criterios de Aceptación para cada una.
-
-En la medida de lo posible, termina una historia de usuario antes de pasar
-a la siguiente (Cumple con Definición de Terminado + Criterios de Aceptación).
 
 
 
-#### Prototipo de baja fidelidad
-
-Durante tu trabajo deberás haber hecho e iterado bocetos (_sketches_) de tu
-solución usando papel y lápiz. Te recomendamos tomar fotos de todas las
-iteraciones que hagas, que las subas a tu repositorio y las menciones en tu
-`README.md`.
-
-#### Prototipo de alta fidelidad
-
-Lo siguiente es diseñar tu Interfaz de Usuario (UI por sus siglas en inglés -
-_User Interface_). Para eso debes aprender a utilizar alguna herramienta de
-diseño visual. Nosotros te recomendamos [Figma](https://www.figma.com/) que es
-una herramienta que funciona en el navegador y, además, puedes crear una cuenta
-gratis. Sin embargo, eres libre de utilizar otros editores gráficos como
-Illustrator, Photoshop, PowerPoint, Keynote, etc.
-
-El diseño debe representar el _ideal_ de tu solución. Digamos que es lo que
-desearías implementar si tuvieras tiempo ilimitado para trabajar. Además, tu
-diseño debe seguir los fundamentos de _visual design_.
-
-#### Testeos de usabilidad
-
-Durante el reto deberás hacer _tests_ de usabilidad con distintos usuarios, y
-en base a los resultados, deberás iterar tus diseños. Cuéntanos
-qué problemas de usabilidad detectaste a través de los _tests_ y cómo los
-mejoraste en tu propuesta final.
 
 ### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
 
