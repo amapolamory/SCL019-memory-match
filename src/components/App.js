@@ -1,18 +1,17 @@
 import puppies from "../data/puppies/puppies.js";
-import initGame from "./initGame.js";
 
 const cards = puppies.items;
 const doubleCards = cards.concat(cards); // almacenamos las cartas duplicadas (cards+cards)
 
-// aleotizar cartas
+// aleatorizar cartas
 const shuffle = () => {
   const cardData = doubleCards;
   cardData.sort(() => Math.random() - 0.5);
   return cardData;
 };
 
-
 shuffle();
+
 
 // Declaramos dos arrays: 1)Cartas clickeadas 2)Match
 let clickCard = [];
@@ -207,7 +206,7 @@ const App = () => {
         if (clickCard.length < 2) {
           //Sólo se puede clickear 2 cartas cada vez
           backFace.setAttribute("src", doubleCards[i].image); //Muestra imagen de carta cuando se gira
-          console.log(backFace);
+          
           clickCard.push(doubleCards[i]); //Guarda cartas clickeadas en array declarado
           setTimeout(() => {
             //Define el tiempo del giro de carta
@@ -218,8 +217,6 @@ const App = () => {
         }
       });
     }
-  
-
    
   };
 
@@ -252,15 +249,6 @@ const App = () => {
           modal();
     
           
-          
-          for (let i = 0; i < 12; i++) {
-            // Impide hacer match sobre match y activa shuffle
-            doubleCards[i].matched = false;
-
-            // que se revuelvan las cartas una vez terminado el juego
-            shuffle(doubleCards);
-            matchedCard = 0;
-          }
         }
       }
       // Reiniciar función para jugar desde 0
@@ -293,4 +281,4 @@ const App = () => {
 
 export default App;
 export { shuffle };
-export { App };
+
