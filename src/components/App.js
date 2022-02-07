@@ -61,6 +61,7 @@ const App = () => {
   chronos.id = "chronos";
   gameContainer.appendChild(chronos);
   chronos.addEventListener("click", countDown);
+  
 
   const timer = document.createElement("div");
   timer.className = "timer";
